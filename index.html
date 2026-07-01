@@ -32,14 +32,23 @@
     html {
       scroll-behavior: smooth;
     }
+
     .typewriter-cursor {
       animation: blink 0.75s step-end infinite;
       color: #b3883e !important;
       font-weight: bold;
     }
+
     @keyframes blink {
-      from, to { opacity: 1; }
-      50% { opacity: 0; }
+
+      from,
+      to {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -81,7 +90,8 @@
         <div class="col-lg-7 col-12 hero-text">
           <h5 class="text-uppercase text-muted">Hello, I'm</h5>
           <h1 class="fw-bold">Pramith Maredukonda</h1>
-          <h3 class="mb-3" style="color: #b3883e !important;"><span id="typewriter"></span><span class="typewriter-cursor">|</span></h3>
+          <h3 class="mb-3" style="color: #b3883e !important;"><span id="typewriter"></span><span
+              class="typewriter-cursor">|</span></h3>
           <p class="text-muted">
             Passionate about building intelligent systems and solving real-world problems using AI, data, and code.
           </p>
@@ -324,11 +334,90 @@
     </div>
 
     <div class="row g-4 px-3 px-md-4" id="projectContainer">
+      <!-- TrackBack Application -->
+      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="web">
+        <div class="card p-3 shadow-sm w-100 h-100">
+          <div class="project-img-wrapper">
+            <img src="assets-portfolio/project_thumbnail/TrackBack.png" class="project-thumbnail"
+              alt="TrackBack Application Thumbnail">
+          </div>
 
+          <h5>TrackBack - Smart Lost & Found System</h5>
+
+          <p>
+            AI-powered Lost & Found web application that securely connects people who lose
+            and find items through smart matching, ownership verification, real-time
+            notifications, and protected communication using Firebase and Cloudinary.
+          </p>
+
+          <div class="mt-auto">
+            <a href="https://github.com/pramithm/TrackBack-Web-PDD" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-dark btn-sm">
+              GitHub
+            </a>
+
+            <a href="https://pramithm.github.io/TrackBack-Web-PDD/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movie Recommendation System -->
       <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
         <div class="card p-3 shadow-sm w-100 h-100">
           <div class="project-img-wrapper">
-            <img src="assets-portfolio/fraud_detection.webp" class="project-thumbnail"
+            <img src="assets-portfolio/project_thumbnail/Movie_recommendation_system.png" class="project-thumbnail"
+              alt="Movie Recommendation System Thumbnail">
+          </div>
+
+          <h5>Movie Recommendation System</h5>
+
+          <p>
+            Machine Learning-based content recommendation system that suggests similar movies
+            using metadata and cosine similarity. Built with Streamlit and integrated with the
+            TMDB API to display live movie posters and provide an interactive user experience.
+          </p>
+
+          <div class="mt-auto">
+            <a href="https://github.com/pramithm/Movie-Recommendation-System" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-dark btn-sm">
+              GitHub
+            </a>
+
+            <a href="https://movierecommendationsystempramith.streamlit.app/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interior Design Website -->
+      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-2" data-category="web">
+        <div class="card p-3 shadow-sm w-100 h-100">
+          <div class="project-img-wrapper">
+            <img src="assets-portfolio/project_thumbnail/Interior Website.png" class="project-thumbnail"
+              alt="Interior Design Website Thumbnail">
+          </div>
+          <h5>Interior Design Website</h5>
+          <p>Responsive business website featuring interactive project galleries, client testimonials, smooth
+            animations, and contact form validation.</p>
+          <div class="mt-auto">
+            <a href="https://github.com/pramithm/Interior-Business-Website" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-dark btn-sm">GitHub</a>
+            <a href="https://agapeinteriors.in/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fraud Detection System -->
+      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
+        <div class="card p-3 shadow-sm w-100 h-100">
+          <div class="project-img-wrapper">
+            <img src="assets-portfolio/project_thumbnail/Fraud_Detection.png" class="project-thumbnail"
               alt="Fraud Detection System Thumbnail">
           </div>
           <h5>Fraud Detection System</h5>
@@ -343,28 +432,12 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-2" data-category="web">
-        <div class="card p-3 shadow-sm w-100 h-100">
-          <div class="project-img-wrapper">
-            <img src="assets-portfolio/interior_design.webp" class="project-thumbnail"
-              alt="Interior Design Website Thumbnail">
-          </div>
-          <h5>Interior Design Website</h5>
-          <p>Responsive business website featuring interactive project galleries, client testimonials, smooth
-            animations, and contact form validation.</p>
-          <div class="mt-auto">
-            <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">GitHub</a>
-            <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">Demo</a>
-          </div>
-        </div>
-      </div>
-
+      <!-- House Price Prediction -->
       <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-3" data-category="ai">
         <div class="card p-3 shadow-sm w-100 h-100">
           <div class="project-img-wrapper">
-            <img src="assets-portfolio/house_price.webp" class="project-thumbnail" alt="House Price Prediction Thumbnail">
+            <img src="assets-portfolio/project_thumbnail/House Price Predication.png" class="project-thumbnail"
+              alt="House Price Prediction Thumbnail">
           </div>
           <h5>House Price Prediction</h5>
           <p>Regression model (Linear Regression, Ridge, Lasso, Gradient Boosting) achieving an 18% RMSE reduction,
@@ -378,10 +451,11 @@
         </div>
       </div>
 
+      <!-- Student Management System -->
       <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="other">
         <div class="card p-3 shadow-sm w-100 h-100">
           <div class="project-img-wrapper">
-            <img src="assets-portfolio/student_mgmt.webp" class="project-thumbnail"
+            <img src="assets-portfolio/project_thumbnail/Student Management System.png" class="project-thumbnail"
               alt="Student Management System Thumbnail">
           </div>
           <h5>Student Management System</h5>
@@ -396,29 +470,66 @@
         </div>
       </div>
 
+      <!-- Face-Controlled Mouse Cursor -->
+      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
+        <div class="card p-3 shadow-sm w-100 h-100">
+          <div class="project-img-wrapper">
+            <img src="assets-portfolio/project_thumbnail/Face_controlled_mouse.png" class="project-thumbnail"
+              alt="Face-Controlled Mouse Cursor Thumbnail">
+          </div>
+
+          <h5>Face-Controlled Mouse Cursor</h5>
+
+          <p>
+            AI-powered hands-free mouse control system that tracks head movements and eye gaze
+            to move the cursor in real time. Built using Python, OpenCV, and MediaPipe for
+            smooth, accurate, and accessible computer interaction.
+          </p>
+
+          <div class="mt-auto">
+            <a href="https://github.com/pramithm/Face-Mouse-Cursor" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-dark btn-sm">
+              GitHub
+            </a>
+
+            <a href="https://github.com/pramithm/Face-Mouse-Cursor" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary btn-sm">
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
   </section>
 
   <!-- Certifications Section -->
-  <section class="container-fluid py-5 fade-up-element" id="certifications" style="background-color: var(--gold-light);">
+  <section class="container-fluid py-5 fade-up-element" id="certifications"
+    style="background-color: var(--gold-light);">
     <h2 class="text-center mb-4 fw-bold">My <span class="text-primary"
         style="color: var(--gold) !important;">Certifications</span></h2>
-    
+
     <div class="position-relative px-md-5 mx-auto" style="max-width: 1200px;">
       <!-- Scroll Container -->
-      <div class="d-flex overflow-auto gap-4 py-3 px-2 no-scrollbar" id="certScrollContainer" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
-        
+      <div class="d-flex overflow-auto gap-4 py-3 px-2 no-scrollbar" id="certScrollContainer"
+        style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+
         <!-- Card 1: SQL Specialist -->
         <div class="flex-shrink-0" style="width: 320px;">
           <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">SQL Database Specialist</h5>
+            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">SQL Database Specialist
+            </h5>
             <div class="cert-img-wrapper">
               <a href="assets-portfolio/certificates/SQL Certificate.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/SQL Certificate.png" alt="SQL Database Specialist Certification" class="w-100 h-100 object-fit-cover hover-zoom">
+                <img src="assets-portfolio/certificates/SQL Certificate.png" alt="SQL Database Specialist Certification"
+                  class="w-100 h-100 object-fit-cover hover-zoom">
               </a>
             </div>
             <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-              Issued by Oracle. Certified in structured querying, relational schema designs, and database performance tuning.
+              Issued by Oracle. Certified in structured querying, relational schema designs, and database performance
+              tuning.
             </p>
           </div>
         </div>
@@ -426,14 +537,17 @@
         <!-- Card 2: AI Engineer Intern -->
         <div class="flex-shrink-0" style="width: 320px;">
           <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">AI Engineer Internship</h5>
+            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">AI Engineer Internship
+            </h5>
             <div class="cert-img-wrapper">
               <a href="assets-portfolio/certificates/Aimen certificate.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/Aimen certificate.png" alt="AI Engineer Internship Certificate" class="w-100 h-100 object-fit-cover hover-zoom">
+                <img src="assets-portfolio/certificates/Aimen certificate.png" alt="AI Engineer Internship Certificate"
+                  class="w-100 h-100 object-fit-cover hover-zoom">
               </a>
             </div>
             <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-              Issued by Aimen Electronics. internship completion certifying practical expertise in ADAS and AI model optimization.
+              Issued by Aimen Electronics. internship completion certifying practical expertise in ADAS and AI model
+              optimization.
             </p>
           </div>
         </div>
@@ -441,10 +555,13 @@
         <!-- Card 3: App Developer Intern -->
         <div class="flex-shrink-0" style="width: 320px;">
           <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">App Developer Internship</h5>
+            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">App Developer
+              Internship</h5>
             <div class="cert-img-wrapper">
-              <a href="assets-portfolio/certificates/secure dataware certificate.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/secure dataware certificate.png" alt="App Developer Internship Certificate" class="w-100 h-100 object-fit-cover hover-zoom">
+              <a href="assets-portfolio/certificates/secure dataware certificate.png" target="_blank"
+                rel="noopener noreferrer">
+                <img src="assets-portfolio/certificates/secure dataware certificate.png"
+                  alt="App Developer Internship Certificate" class="w-100 h-100 object-fit-cover hover-zoom">
               </a>
             </div>
             <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
@@ -456,14 +573,17 @@
         <!-- Card 4: Salesforce Developer -->
         <div class="flex-shrink-0" style="width: 320px;">
           <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Salesforce Developer</h5>
+            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Salesforce Developer
+            </h5>
             <div class="cert-img-wrapper">
               <a href="assets-portfolio/certificates/saleforce.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/saleforce.png" alt="Salesforce Developer Certification" class="w-100 h-100 object-fit-cover hover-zoom">
+                <img src="assets-portfolio/certificates/saleforce.png" alt="Salesforce Developer Certification"
+                  class="w-100 h-100 object-fit-cover hover-zoom">
               </a>
             </div>
             <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-              Issued by Salesforce. Certified in CRM customization, Apex workflows, and lightning component developer fundamentals.
+              Issued by Salesforce. Certified in CRM customization, Apex workflows, and lightning component developer
+              fundamentals.
             </p>
           </div>
         </div>
@@ -471,10 +591,12 @@
         <!-- Card 5: Cognizant Hackathon -->
         <div class="flex-shrink-0" style="width: 320px;">
           <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Cognizant Hackathon</h5>
+            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Cognizant Hackathon
+            </h5>
             <div class="cert-img-wrapper">
               <a href="assets-portfolio/certificates/cognizant hackathon.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/cognizant hackathon.png" alt="Cognizant Hackathon Certificate" class="w-100 h-100 object-fit-cover hover-zoom">
+                <img src="assets-portfolio/certificates/cognizant hackathon.png" alt="Cognizant Hackathon Certificate"
+                  class="w-100 h-100 object-fit-cover hover-zoom">
               </a>
             </div>
             <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
@@ -486,10 +608,18 @@
       </div>
 
       <!-- Navigation Arrows -->
-      <button class="btn btn-primary d-none d-md-flex align-items-center justify-content-center position-absolute top-50 start-0 translate-middle-y rounded-circle" onclick="scrollCertificates('left')" style="width: 40px; height: 40px; background-color: var(--gold) !important; border-color: var(--gold) !important; z-index: 10;" aria-label="Scroll left">
+      <button
+        class="btn btn-primary d-none d-md-flex align-items-center justify-content-center position-absolute top-50 start-0 translate-middle-y rounded-circle"
+        onclick="scrollCertificates('left')"
+        style="width: 40px; height: 40px; background-color: var(--gold) !important; border-color: var(--gold) !important; z-index: 10;"
+        aria-label="Scroll left">
         <i class="fa-solid fa-chevron-left" style="color: #fff;"></i>
       </button>
-      <button class="btn btn-primary d-none d-md-flex align-items-center justify-content-center position-absolute top-50 end-0 translate-middle-y rounded-circle" onclick="scrollCertificates('right')" style="width: 40px; height: 40px; background-color: var(--gold) !important; border-color: var(--gold) !important; z-index: 10;" aria-label="Scroll right">
+      <button
+        class="btn btn-primary d-none d-md-flex align-items-center justify-content-center position-absolute top-50 end-0 translate-middle-y rounded-circle"
+        onclick="scrollCertificates('right')"
+        style="width: 40px; height: 40px; background-color: var(--gold) !important; border-color: var(--gold) !important; z-index: 10;"
+        aria-label="Scroll right">
         <i class="fa-solid fa-chevron-right" style="color: #fff;"></i>
       </button>
     </div>
