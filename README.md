@@ -1,5 +1,5 @@
 # 🌐 Personal Portfolio Website
-https://agapeinteriors.in/pramith_portfolio.html <br>
+https://pramithm.github.io <br>
 A modern and responsive **Personal Portfolio Website** built to showcase my **projects, technical skills, certifications, and contact details** in a clean and professional way.
 This portfolio serves as my digital presence where recruiters, clients, and collaborators can explore my work and learn more about me.
 
