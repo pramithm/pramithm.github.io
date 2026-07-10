@@ -1035,6 +1035,24 @@
       }
 
     });
+
+    //closing menu when clicked on outide of it
+    document.addEventListener("click", function (event) {
+
+      const navbar = document.querySelector(".navbar-collapse");
+      const toggler = document.querySelector(".navbar-toggler");
+
+      // If menu is open
+      if (navbar.classList.contains("show")) {
+
+        // Clicked outside the navbar and not on the toggle button
+        if (!navbar.contains(event.target) && !toggler.contains(event.target)) {
+          toggler.click(); // Close menu
+        }
+
+      }
+
+    });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="js/intro.js"></script>
