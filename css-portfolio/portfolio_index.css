@@ -404,7 +404,7 @@ body {
 
 /* ── SKILLS SECTION ───────────────────────── */
 #skills {
-  background-color: var(--apricot-light);
+  background-color: rgba(232, 210, 150, 0.828);
   padding: 4rem 0;
 }
 
@@ -1153,4 +1153,4 @@ footer .text-muted:hover { color: var(--apricot) !important; }
   .hero-img-wrapper {
     animation: none !important;
   }
-}
+}

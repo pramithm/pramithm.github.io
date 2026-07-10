@@ -24,7 +24,7 @@
     color:#c98b8b;
 }
 
-h1{
+#intro-name{
     margin-top:22px;
     font-family:'Inter', sans-serif;
     font-size:18px;
@@ -33,7 +33,7 @@ h1{
     letter-spacing:0.3px;
 }
 
-h2{
+#intro-title{
     margin-top:8px;
     font-family:'Playfair Display', Georgia, serif;
     font-size:36px;
@@ -42,7 +42,7 @@ h2{
     letter-spacing:0.2px;
 }
 
-p{
+#intro-description{
     margin:14px 0 34px;
     font-size:13px;
     font-weight:500;
@@ -51,7 +51,7 @@ p{
     color:#c98b8b;
 }
 
-.progress{
+.progress1{
     width:160px;
     height:2px;
     background:#ece3e1;
@@ -60,13 +60,13 @@ p{
     margin:0 auto;
 }
 
-.progress-bar{
+.progress-bar1{
     width:0%;
     height:100%;
     background:#c98b8b;
 }
 
-.loading{
+.loading1{
     display:block;
     margin-top:16px;
     font-size:12px;
