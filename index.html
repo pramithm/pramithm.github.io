@@ -77,9 +77,28 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#b3883e">
   <link rel="icon" href="favicon.ico">
+  <script>
+    if (sessionStorage.getItem("introPlayed")) {
+      document.documentElement.classList.add("intro-played");
+    }
+  </script>
   <style>
     html {
       scroll-behavior: smooth;
+    }
+
+    #portfolio-wrapper {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .intro-played #portfolio-wrapper {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .intro-played #intro {
+      display: none !important;
     }
 
     .typewriter-cursor {
@@ -100,6 +119,18 @@
       }
     }
   </style>
+  <noscript>
+    <style>
+      #portfolio-wrapper {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      #intro {
+        display: none !important;
+      }
+    </style>
+  </noscript>
   <meta name="google-site-verification" content="l4IwNDzYYGCkEPkPLoquJwLFhrQuRTu7Tlo4yeMEYSo" />
 </head>
 
@@ -128,728 +159,740 @@
 
   </div>
 
+  <div id="portfolio-wrapper">
 
-  <!-- Nav Bar -->
-  <nav class="navbar navbar-expand-lg navbar-custom" id="mainNav">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Portfolio</a>
-      <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end me-4" id="navbarNav">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom" id="mainNav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end me-4" id="navbarNav">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section py-5">
-    <div class="shape1"></div>
-    <div class="shape2"></div>
-    <div class="shape3"></div>
-    <div class="container">
-      <div class="row align-items-center gy-5">
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+      <div class="container">
+        <div class="row align-items-center gy-5">
 
-        <!-- LEFT CONTENT -->
-        <div class="col-lg-7 col-12 hero-text">
-          <h5 class="text-uppercase text-muted">Hello, I'm</h5>
-          <h1 class="fw-bold">Pramith Maredukonda</h1>
-          <h3 class="mb-3" style="color: #b3883e !important;"><span id="typewriter"></span><span
-              class="typewriter-cursor">|</span></h3>
-          <p class="text-muted">
-            Passionate about building intelligent systems and solving real-world problems using AI, data, and code.
-          </p>
-          <div class="d-flex gap-3 flex-wrap hero-btns">
-            <button class="btn btn-dark px-4 py-2"
-              onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View Projects</button>
-            <a href="assets-portfolio/Pramith_Resume.pdf" download class="btn btn-outline-dark px-4 py-2">Download
-              CV</a>
+          <!-- LEFT CONTENT -->
+          <div class="col-lg-7 col-12 hero-text">
+            <h5 class="text-uppercase text-muted">Hello, I'm</h5>
+            <h1 class="fw-bold">Pramith Maredukonda</h1>
+            <h3 class="mb-3" style="color: #b3883e !important;"><span id="typewriter"></span><span
+                class="typewriter-cursor">|</span></h3>
+            <p class="text-muted">
+              Passionate about building intelligent systems and solving real-world problems using AI, data, and code.
+            </p>
+            <div class="d-flex gap-3 flex-wrap hero-btns">
+              <button class="btn btn-dark px-4 py-2"
+                onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View
+                Projects</button>
+              <a href="assets-portfolio/Pramith_Resume.pdf" download class="btn btn-outline-dark px-4 py-2">Download
+                CV</a>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="col-lg-4 col-12 text-center ms-lg-auto">
+            <div class="hero-img-wrapper mx-auto">
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <div class="ring ring-3"></div>
+              <img src="assets-portfolio/Pramith_Images/pic2.png" class="img-fluid hero-img"
+                alt="Pramith Maredukonda Profile Picture">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container-fluid fade-up-element" id="about">
+      <h1 class="text-center py-3">About Me</h1>
+      <div class="about_me col-11 col-sm-9 col-lg-7 mx-auto">
+        <p>I'm a <span class="fw-bold">Computer Science and Engineering</span> student specializing in <span
+            class="fw-bold">Artificial Intelligence and Machine Learning</span>. I love
+          building smart applications that leverage data-driven insights. With a strong foundation in <span
+            class="fw-bold">Data Structures</span>,
+          <span class="fw-bold">Algorithms</span>, <span class="fw-bold">DBMS</span>, and <span class="fw-bold">Computer
+            Networks</span>, I enjoy tackling <span class="fw-bold">complex problems</span> and learning cutting-edge
+          technologies. I'm also deeply interested in <span class="fw-bold">Cybersecurity</span> and how AI intersects
+          with securing digital systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="container-fluid py-5 fade-up-element" id="education" style="background-color: rgb(232, 224, 192);">
+      <h2 class="text-center mb-4 fw-bold">My <span class="text-primary"
+          style="color: var(--gold) !important;">Education</span></h2>
+      <div class="row g-4 px-3 px-md-4 justify-content-center">
+
+        <!-- B.E. -->
+        <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
+          <div class="p-4 shadow rounded bg-light h-100 w-100" style="border-top: 5px solid var(--gold);">
+            <h5 class="fw-bold" style="color: var(--gold);">Bachelor of Engineering (B.E.)</h5>
+            <h6 class="text-muted mb-2">Computer Science Engineering in Artificial Intelligence | 2023 - 2027</h6>
+            <p class="mb-2" style="font-size: 0.95rem; font-weight: 500;">Saveetha School of Engineering, Chennai, Tamil
+              Nadu</p>
+            <div class="mb-3">
+              <strong style="font-size: 0.88rem; color: var(--text-dark);">Academic Focus:</strong>
+              <ul class="text-muted ps-3 mt-1" style="font-size: 0.82rem; line-height: 1.5; margin-bottom: 0;">
+                <li>Artificial Intelligence & Machine Learning</li>
+                <li>Full Stack Development</li>
+                <li>Android Development</li>
+                <li>Data Structures & Algorithms</li>
+                <li>Problem Solving</li>
+                <li>Computer Vision</li>
+              </ul>
+            </div>
+            <div class="mt-auto">
+              <span class="badge" style="background-color: var(--gold) !important; color: #fff;">CGPA: 8.9 / 10</span>
+            </div>
           </div>
         </div>
 
-        <!-- RIGHT IMAGE -->
-        <div class="col-lg-4 col-12 text-center ms-lg-auto">
-          <div class="hero-img-wrapper mx-auto">
-            <div class="ring ring-1"></div>
-            <div class="ring ring-2"></div>
-            <div class="ring ring-3"></div>
-            <img src="assets-portfolio/Pramith_Images/pic2.png" class="img-fluid hero-img"
-              alt="Pramith Maredukonda Profile Picture">
+        <!-- School Education (12th + 10th combined) -->
+        <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
+          <div class="p-4 shadow rounded bg-light h-100 w-100" style="border-top: 5px solid var(--gold);">
+
+            <!-- 12th -->
+            <h5 class="fw-bold" style="color: var(--gold);">12th Grade (HSC) — MPC</h5>
+            <h6 class="text-muted mb-2">Mathematics, Physics, Chemistry | 2021 - 2023</h6>
+            <p class="mb-2" style="font-size: 0.95rem; font-weight: 500;">S.R. Junior College for Boys, Hanamkonda</p>
+            <div class="mb-3">
+              <span class="badge" style="background-color: var(--gold) !important; color: #fff;">Percentage: 95%</span>
+            </div>
+
+            <hr class="my-3" style="border-color: var(--gold); opacity: 0.3;">
+
+            <!-- 10th -->
+            <h5 class="fw-bold" style="color: var(--gold);">Secondary School Education</h5>
+            <h6 class="text-muted mb-2">General Studies | Class of 2021</h6>
+            <p class="mb-2" style="font-size: 0.95rem; font-weight: 500;">Shine High School, Hanamkonda</p>
+            <div class="mt-auto">
+              <span class="badge" style="background-color: var(--gold) !important; color: #fff;">CGPA: 10</span>
+            </div>
+
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section class="container-fluid fade-up-element" id="about">
-    <h1 class="text-center py-3">About Me</h1>
-    <div class="about_me col-11 col-sm-9 col-lg-7 mx-auto">
-      <p>I'm a <span class="fw-bold">Computer Science and Engineering</span> student specializing in <span
-          class="fw-bold">Artificial Intelligence and Machine Learning</span>. I love
-        building smart applications that leverage data-driven insights. With a strong foundation in <span
-          class="fw-bold">Data Structures</span>,
-        <span class="fw-bold">Algorithms</span>, <span class="fw-bold">DBMS</span>, and <span class="fw-bold">Computer
-          Networks</span>, I enjoy tackling <span class="fw-bold">complex problems</span> and learning cutting-edge
-        technologies. I'm also deeply interested in <span class="fw-bold">Cybersecurity</span> and how AI intersects
-        with securing digital systems.
-      </p>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section class="container-fluid py-5 fade-up-element" id="skills">
+      <h2 class="text-center mb-4 fw-bold">My <span class="text-primary"
+          style="color: rgb(167, 120, 81) !important;">Skills</span></h2>
 
-  <!-- Education Section -->
-  <section class="container-fluid py-5 fade-up-element" id="education" style="background-color: rgb(232, 224, 192);">
-    <h2 class="text-center mb-4 fw-bold">My <span class="text-primary"
-        style="color: var(--gold) !important;">Education</span></h2>
-    <div class="row g-4 px-3 px-md-4 justify-content-center">
+      <div class="row g-4 skills-grid">
 
-      <!-- B.E. -->
-      <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
-        <div class="p-4 shadow rounded bg-light h-100 w-100" style="border-top: 5px solid var(--gold);">
-          <h5 class="fw-bold" style="color: var(--gold);">Bachelor of Engineering (B.E.)</h5>
-          <h6 class="text-muted mb-2">Computer Science Engineering in Artificial Intelligence | 2023 - 2027</h6>
-          <p class="mb-2" style="font-size: 0.95rem; font-weight: 500;">Saveetha School of Engineering, Chennai, Tamil
-            Nadu</p>
-          <div class="mb-3">
-            <strong style="font-size: 0.88rem; color: var(--text-dark);">Academic Focus:</strong>
-            <ul class="text-muted ps-3 mt-1" style="font-size: 0.82rem; line-height: 1.5; margin-bottom: 0;">
-              <li>Artificial Intelligence & Machine Learning</li>
-              <li>Full Stack Development</li>
-              <li>Android Development</li>
-              <li>Data Structures & Algorithms</li>
-              <li>Problem Solving</li>
-              <li>Computer Vision</li>
+        <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
+          <div class="p-4 shadow rounded bg-light h-100 w-100">
+            <h5>Programming Languages</h5>
+            <p class="mb-1">Python <span class="float-end">90%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <p class="mb-1">Java <span class="float-end">80%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <p class="mb-1">C++ <span class="float-end">75%</span></p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
+          <div class="p-4 shadow rounded bg-light h-100 w-100">
+            <h5>Web Technologies</h5>
+            <p class="mb-1">HTML <span class="float-end">85%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <p class="mb-1">CSS <span class="float-end">80%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <p class="mb-1">JavaScript <span class="float-end">75%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 75%"></div>
+            </div>
+            <p class="mb-1">React Native <span class="float-end">70%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 70%"></div>
+            </div>
+            <p class="mb-1">Firebase <span class="float-end">65%</span></p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 65%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
+          <div class="p-4 shadow rounded bg-light h-100 w-100">
+            <h5>Core Subjects</h5>
+            <p class="mb-1">Data Structures <span class="float-end">85%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <p class="mb-1">DBMS <span class="float-end">80%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <p class="mb-1">Computer Networks <span class="float-end">75%</span></p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
+          <div class="p-4 shadow rounded bg-light h-100 w-100">
+            <h5>AI/ML & General Tools</h5>
+            <p class="mb-1">Git & GitHub <span class="float-end">85%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <p class="mb-1">NumPy & Pandas <span class="float-end">80%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <p class="mb-1">Scikit-learn <span class="float-end">75%</span></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 75%"></div>
+            </div>
+            <p class="mb-1">Cybersecurity <span class="float-end">70%</span></p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="container-fluid py-5 fade-up-element" id="experience" style="background-color: rgb(217, 209, 176);">
+      <h2 class="text-center mb-4 fw-bold">Work <span class="text-primary"
+          style="color: rgba(81, 81, 81, 0.936) !important;">Experience</span></h2>
+      <div class="row g-4 px-3 px-md-4 justify-content-center">
+
+        <!-- AI Engineer -->
+        <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
+          <div class="p-4 shadow rounded bg-light h-100 w-100" style="border-top: 5px solid var(--apricot);">
+            <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+              <h5 class="fw-bold mb-0" style="color: var(--gold);">AI Engineer</h5>
+              <span class="badge" style="background-color: var(--apricot) !important; color: #fff;">October 2025 –
+                January
+                2026</span>
+            </div>
+            <h6 class="text-muted">Aimen Electronics India Pvt. Ltd.</h6>
+
+            <p class="mt-3 text-muted" style="font-size: 0.9rem; line-height: 1.6;">
+              Worked on AI-driven features for ADAS, building computer vision
+              models for real-time detection in automotive applications.
+            </p>
+
+            <p class="mb-1 fw-bold" style="font-size: 0.9rem;">Key Contributions</p>
+            <ul class="ps-3 text-muted" style="font-size: 0.9rem; line-height: 1.6;">
+              <li>Implemented ADAS-related AI features.</li>
+              <li>Built and tested computer vision models.</li>
+              <li>Contributed to AI-based feature development.</li>
             </ul>
-          </div>
-          <div class="mt-auto">
-            <span class="badge" style="background-color: var(--gold) !important; color: #fff;">CGPA: 8.9 / 10</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- School Education (12th + 10th combined) -->
-      <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
-        <div class="p-4 shadow rounded bg-light h-100 w-100" style="border-top: 5px solid var(--gold);">
-
-          <!-- 12th -->
-          <h5 class="fw-bold" style="color: var(--gold);">12th Grade (HSC) — MPC</h5>
-          <h6 class="text-muted mb-2">Mathematics, Physics, Chemistry | 2021 - 2023</h6>
-          <p class="mb-2" style="font-size: 0.95rem; font-weight: 500;">S.R. Junior College for Boys, Hanamkonda</p>
-          <div class="mb-3">
-            <span class="badge" style="background-color: var(--gold) !important; color: #fff;">Percentage: 95%</span>
-          </div>
-
-          <hr class="my-3" style="border-color: var(--gold); opacity: 0.3;">
-
-          <!-- 10th -->
-          <h5 class="fw-bold" style="color: var(--gold);">Secondary School Education</h5>
-          <h6 class="text-muted mb-2">General Studies | Class of 2021</h6>
-          <p class="mb-2" style="font-size: 0.95rem; font-weight: 500;">Shine High School, Hanamkonda</p>
-          <div class="mt-auto">
-            <span class="badge" style="background-color: var(--gold) !important; color: #fff;">CGPA: 10</span>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="container-fluid py-5 fade-up-element" id="skills">
-    <h2 class="text-center mb-4 fw-bold">My <span class="text-primary" style ="color: rgb(167, 120, 81) !important;">Skills</span></h2>
-
-    <div class="row g-4 skills-grid">
-
-      <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
-        <div class="p-4 shadow rounded bg-light h-100 w-100">
-          <h5>Programming Languages</h5>
-          <p class="mb-1">Python <span class="float-end">90%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 90%"></div>
-          </div>
-          <p class="mb-1">Java <span class="float-end">80%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 80%"></div>
-          </div>
-          <p class="mb-1">C++ <span class="float-end">75%</span></p>
-          <div class="progress">
-            <div class="progress-bar" style="width: 75%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
-        <div class="p-4 shadow rounded bg-light h-100 w-100">
-          <h5>Web Technologies</h5>
-          <p class="mb-1">HTML <span class="float-end">85%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 85%"></div>
-          </div>
-          <p class="mb-1">CSS <span class="float-end">80%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 80%"></div>
-          </div>
-          <p class="mb-1">JavaScript <span class="float-end">75%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 75%"></div>
-          </div>
-          <p class="mb-1">React Native <span class="float-end">70%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 70%"></div>
-          </div>
-          <p class="mb-1">Firebase <span class="float-end">65%</span></p>
-          <div class="progress">
-            <div class="progress-bar" style="width: 65%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
-        <div class="p-4 shadow rounded bg-light h-100 w-100">
-          <h5>Core Subjects</h5>
-          <p class="mb-1">Data Structures <span class="float-end">85%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 85%"></div>
-          </div>
-          <p class="mb-1">DBMS <span class="float-end">80%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 80%"></div>
-          </div>
-          <p class="mb-1">Computer Networks <span class="float-end">75%</span></p>
-          <div class="progress">
-            <div class="progress-bar" style="width: 75%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
-        <div class="p-4 shadow rounded bg-light h-100 w-100">
-          <h5>AI/ML & General Tools</h5>
-          <p class="mb-1">Git & GitHub <span class="float-end">85%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 85%"></div>
-          </div>
-          <p class="mb-1">NumPy & Pandas <span class="float-end">80%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 80%"></div>
-          </div>
-          <p class="mb-1">Scikit-learn <span class="float-end">75%</span></p>
-          <div class="progress mb-3">
-            <div class="progress-bar" style="width: 75%"></div>
-          </div>
-          <p class="mb-1">Cybersecurity <span class="float-end">70%</span></p>
-          <div class="progress">
-            <div class="progress-bar" style="width: 70%"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section class="container-fluid py-5 fade-up-element" id="experience" style="background-color: rgb(217, 209, 176);">
-    <h2 class="text-center mb-4 fw-bold">Work <span class="text-primary"
-        style="color: rgba(81, 81, 81, 0.936) !important;">Experience</span></h2>
-    <div class="row g-4 px-3 px-md-4 justify-content-center">
-
-      <!-- AI Engineer -->
-      <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
-        <div class="p-4 shadow rounded bg-light h-100 w-100" style="border-top: 5px solid var(--apricot);">
-          <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-            <h5 class="fw-bold mb-0" style="color: var(--gold);">AI Engineer</h5>
-            <span class="badge" style="background-color: var(--apricot) !important; color: #fff;">October 2025 – January
-              2026</span>
-          </div>
-          <h6 class="text-muted">Aimen Electronics India Pvt. Ltd.</h6>
-
-          <p class="mt-3 text-muted" style="font-size: 0.9rem; line-height: 1.6;">
-            Worked on AI-driven features for ADAS, building computer vision
-            models for real-time detection in automotive applications.
-          </p>
-
-          <p class="mb-1 fw-bold" style="font-size: 0.9rem;">Key Contributions</p>
-          <ul class="ps-3 text-muted" style="font-size: 0.9rem; line-height: 1.6;">
-            <li>Implemented ADAS-related AI features.</li>
-            <li>Built and tested computer vision models.</li>
-            <li>Contributed to AI-based feature development.</li>
-          </ul>
 
 
-          <p class="mb-1 fw-semibold" style="font-size: 0.9rem; color: var(--gold);">Technologies</p>
-          <p class="mb-0" style="font-size: 0.85rem;">
-            <span class="badge bg-secondary me-1">Python</span>
-            <span class="badge bg-secondary me-1">OpenCV</span>
-            <span class="badge bg-secondary me-1">TensorFlow</span>
-            <span class="badge bg-secondary me-1">Computer Vision</span>
-            <span class="badge bg-secondary me-1">Git</span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Android Developer -->
-      <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
-        <div class="p-4 shadow rounded bg-light h-100 w-100" style="border-top: 5px solid var(--apricot);">
-          <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-            <h5 class="fw-bold mb-0" style="color: var(--gold);">Android Developer</h5>
-            <span class="badge" style="background-color: var(--apricot) !important; color: #fff;">August 2025 – October
-              2025</span>
-          </div>
-          <h6 class="text-muted">Secure Dataware Technologies</h6>
-
-          <p class="mt-3 text-muted" style="font-size: 0.9rem; line-height: 1.6;">
-            Developed Android applications by implementing new features, improving
-            user experience, and working with modern Android development tools.
-          </p>
-
-          <p class="mb-1 fw-bold" style="font-size: 0.9rem;">Key Contributions</p>
-          <ul class="ps-3 text-muted" style="font-size: 0.9rem; line-height: 1.6;">
-            <li>Developed Android application features.</li>
-            <li>Fixed bugs and improved performance.</li>
-            <li>Worked with UI implementation and testing.</li>
-          </ul>
-
-          <p class="mb-1 fw-semibold" style="font-size: 0.9rem; color: var(--gold);">Technologies</p>
-          <p class="mb-0" style="font-size: 0.85rem;">
-            <span class="badge bg-secondary me-1">Java</span>
-            <span class="badge bg-secondary me-1">Android Studio</span>
-            <span class="badge bg-secondary me-1">XML</span>
-            <span class="badge bg-secondary me-1">Firebase</span>
-            <span class="badge bg-secondary me-1">Git</span>
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="container-fluid py-5 fade-up-element" id="projects">
-    <h2 class="text-center mb-4 fw-bold">My <span class="text-primary">Projects</span></h2>
-
-    <div class="text-center mb-4">
-      <button class="btn btn-primary filter-btn" data-filter="all">All</button>
-      <button class="btn btn-light filter-btn" data-filter="ai">AI</button>
-      <button class="btn btn-light filter-btn" data-filter="web">Web</button>
-      <button class="btn btn-light filter-btn" data-filter="other">Others</button>
-    </div>
-
-    <div class="row g-4 px-3 px-md-4" id="projectContainer">
-      <!-- TrackBack Application -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="web">
-        <div class="card p-3 shadow-sm w-100 h-100">
-          <div class="project-img-wrapper">
-            <img src="assets-portfolio/project_thumbnail/TrackBack.png" class="project-thumbnail"
-              alt="TrackBack Application Thumbnail">
-          </div>
-
-          <h5>TrackBack - Smart Lost & Found System</h5>
-
-          <p>
-            AI-powered Lost & Found web application that securely connects people who lose
-            and find items through smart matching, ownership verification, real-time
-            notifications, and protected communication using Firebase and Cloudinary.
-          </p>
-
-          <div class="mt-auto">
-            <a href="https://github.com/pramithm/TrackBack-Web-PDD" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">
-              GitHub
-            </a>
-
-            <a href="https://pramithm.github.io/TrackBack-Web-PDD/" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">
-              Demo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Movie Recommendation System -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
-        <div class="card p-3 shadow-sm w-100 h-100">
-          <div class="project-img-wrapper">
-            <img src="assets-portfolio/project_thumbnail/Movie_recommendation_system.png" class="project-thumbnail"
-              alt="Movie Recommendation System Thumbnail">
-          </div>
-
-          <h5>Movie Recommendation System</h5>
-
-          <p>
-            Machine Learning-based content recommendation system that suggests similar movies
-            using metadata and cosine similarity. Built with Streamlit and integrated with the
-            TMDB API to display live movie posters and provide an interactive user experience.
-          </p>
-
-          <div class="mt-auto">
-            <a href="https://github.com/pramithm/Movie-Recommendation-System" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">
-              GitHub
-            </a>
-
-            <a href="https://movierecommendationsystempramith.streamlit.app/" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">
-              Demo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Interior Design Website -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-2" data-category="web">
-        <div class="card p-3 shadow-sm w-100 h-100">
-          <div class="project-img-wrapper">
-            <img src="assets-portfolio/project_thumbnail/Interior Website.png" class="project-thumbnail"
-              alt="Interior Design Website Thumbnail">
-          </div>
-          <h5>Interior Design Website</h5>
-          <p>Responsive business website featuring interactive project galleries, client testimonials, smooth
-            animations, and contact form validation.</p>
-          <div class="mt-auto">
-            <a href="https://github.com/pramithm/Interior-Business-Website" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">GitHub</a>
-            <a href="https://agapeinteriors.in/" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fraud Detection System -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
-        <div class="card p-3 shadow-sm w-100 h-100">
-          <div class="project-img-wrapper">
-            <img src="assets-portfolio/project_thumbnail/Fraud_Detection.png" class="project-thumbnail"
-              alt="Fraud Detection System Thumbnail">
-          </div>
-          <h5>Fraud Detection System</h5>
-          <p>ML model using SMOTE oversampling and XGBoost/Random Forest (90%+ ROC-AUC) to detect fraudulent
-            transactions with a Flask API backend.</p>
-          <div class="mt-auto">
-            <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">GitHub</a>
-            <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- House Price Prediction -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-3" data-category="ai">
-        <div class="card p-3 shadow-sm w-100 h-100">
-          <div class="project-img-wrapper">
-            <img src="assets-portfolio/project_thumbnail/House Price Predication.png" class="project-thumbnail"
-              alt="House Price Prediction Thumbnail">
-          </div>
-          <h5>House Price Prediction</h5>
-          <p>Regression model (Linear Regression, Ridge, Lasso, Gradient Boosting) achieving an 18% RMSE reduction,
-            integrated with a web interface.</p>
-          <div class="mt-auto">
-            <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">GitHub</a>
-            <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Student Management System -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="other">
-        <div class="card p-3 shadow-sm w-100 h-100">
-          <div class="project-img-wrapper">
-            <img src="assets-portfolio/project_thumbnail/Student Management System.png" class="project-thumbnail"
-              alt="Student Management System Thumbnail">
-          </div>
-          <h5>Student Management System</h5>
-          <p>Full-stack CRUD student record application implementing robust security authentication, role-based
-            controls, and database schemas.</p>
-          <div class="mt-auto">
-            <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">GitHub</a>
-            <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Face-Controlled Mouse Cursor -->
-      <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
-        <div class="card p-3 shadow-sm w-100 h-100">
-          <div class="project-img-wrapper">
-            <img src="assets-portfolio/project_thumbnail/Face_controlled_mouse.png" class="project-thumbnail"
-              alt="Face-Controlled Mouse Cursor Thumbnail">
-          </div>
-
-          <h5>Face-Controlled Mouse Cursor</h5>
-
-          <p>
-            AI-powered hands-free mouse control system that tracks head movements and eye gaze
-            to move the cursor in real time. Built using Python, OpenCV, and MediaPipe for
-            smooth, accurate, and accessible computer interaction.
-          </p>
-
-          <div class="mt-auto">
-            <a href="https://github.com/pramithm/Face-Mouse-Cursor" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark btn-sm">
-              GitHub
-            </a>
-
-            <a href="https://github.com/pramithm/Face-Mouse-Cursor" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary btn-sm">
-              Demo
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-  </section>
-
-  <!-- Certifications Section -->
-  <section class="container-fluid py-5 fade-up-element" id="certifications"
-    style="background-color: rgba(233, 196, 102, 0.794);">
-    <h2 class="text-center mb-4 fw-bold">My <span class="text-primary"
-        style="color: rgb(74, 68, 68) !important;">Certifications</span></h2>
-
-    <div class="position-relative px-md-5 mx-auto" style="max-width: 1200px;">
-      <!-- Scroll Container -->
-      <div class="d-flex overflow-auto gap-4 py-3 px-2 no-scrollbar" id="certScrollContainer"
-        style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
-
-        <!-- Card 1: SQL Specialist -->
-        <div class="flex-shrink-0" style="width: 320px;">
-          <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">SQL Database Specialist
-            </h5>
-            <div class="cert-img-wrapper">
-              <a href="assets-portfolio/certificates/SQL Certificate.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/SQL Certificate.png" alt="SQL Database Specialist Certification"
-                  class="w-100 h-100 object-fit-cover hover-zoom">
-              </a>
-            </div>
-            <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-              Issued by Oracle. Certified in structured querying, relational schema designs, and database performance
-              tuning.
+            <p class="mb-1 fw-semibold" style="font-size: 0.9rem; color: var(--gold);">Technologies</p>
+            <p class="mb-0" style="font-size: 0.85rem;">
+              <span class="badge bg-secondary me-1">Python</span>
+              <span class="badge bg-secondary me-1">OpenCV</span>
+              <span class="badge bg-secondary me-1">TensorFlow</span>
+              <span class="badge bg-secondary me-1">Computer Vision</span>
+              <span class="badge bg-secondary me-1">Git</span>
             </p>
           </div>
         </div>
 
-        <!-- Card 2: AI Engineer Intern -->
-        <div class="flex-shrink-0" style="width: 320px;">
-          <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">AI Engineer Internship
-            </h5>
-            <div class="cert-img-wrapper">
-              <a href="assets-portfolio/certificates/Aimen certificate.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/Aimen certificate.png" alt="AI Engineer Internship Certificate"
-                  class="w-100 h-100 object-fit-cover hover-zoom">
-              </a>
+        <!-- Android Developer -->
+        <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
+          <div class="p-4 shadow rounded bg-light h-100 w-100" style="border-top: 5px solid var(--apricot);">
+            <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+              <h5 class="fw-bold mb-0" style="color: var(--gold);">Android Developer</h5>
+              <span class="badge" style="background-color: var(--apricot) !important; color: #fff;">August 2025 –
+                October
+                2025</span>
             </div>
-            <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-              Issued by Aimen Electronics. internship completion certifying practical expertise in ADAS and AI model
-              optimization.
-            </p>
-          </div>
-        </div>
+            <h6 class="text-muted">Secure Dataware Technologies</h6>
 
-        <!-- Card 3: App Developer Intern -->
-        <div class="flex-shrink-0" style="width: 320px;">
-          <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">App Developer
-              Internship</h5>
-            <div class="cert-img-wrapper">
-              <a href="assets-portfolio/certificates/secure dataware certificate.png" target="_blank"
-                rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/secure dataware certificate.png"
-                  alt="App Developer Internship Certificate" class="w-100 h-100 object-fit-cover hover-zoom">
-              </a>
-            </div>
-            <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-              Issued by Secure Dataware Technologies. Certified App Development training in Android SDK frameworks.
+            <p class="mt-3 text-muted" style="font-size: 0.9rem; line-height: 1.6;">
+              Developed Android applications by implementing new features, improving
+              user experience, and working with modern Android development tools.
             </p>
-          </div>
-        </div>
 
-        <!-- Card 4: Salesforce Developer -->
-        <div class="flex-shrink-0" style="width: 320px;">
-          <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Salesforce Developer
-            </h5>
-            <div class="cert-img-wrapper">
-              <a href="assets-portfolio/certificates/saleforce.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/saleforce.png" alt="Salesforce Developer Certification"
-                  class="w-100 h-100 object-fit-cover hover-zoom">
-              </a>
-            </div>
-            <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-              Issued by Salesforce. Certified in CRM customization, Apex workflows, and lightning component developer
-              fundamentals.
-            </p>
-          </div>
-        </div>
+            <p class="mb-1 fw-bold" style="font-size: 0.9rem;">Key Contributions</p>
+            <ul class="ps-3 text-muted" style="font-size: 0.9rem; line-height: 1.6;">
+              <li>Developed Android application features.</li>
+              <li>Fixed bugs and improved performance.</li>
+              <li>Worked with UI implementation and testing.</li>
+            </ul>
 
-        <!-- Card 5: Cognizant Hackathon -->
-        <div class="flex-shrink-0" style="width: 320px;">
-          <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
-            <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Cognizant Hackathon
-            </h5>
-            <div class="cert-img-wrapper">
-              <a href="assets-portfolio/certificates/cognizant hackathon.png" target="_blank" rel="noopener noreferrer">
-                <img src="assets-portfolio/certificates/cognizant hackathon.png" alt="Cognizant Hackathon Certificate"
-                  class="w-100 h-100 object-fit-cover hover-zoom">
-              </a>
-            </div>
-            <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-              Cognizant Hackathon credentials certifying leadership, project coordination, and hackathon organization.
+            <p class="mb-1 fw-semibold" style="font-size: 0.9rem; color: var(--gold);">Technologies</p>
+            <p class="mb-0" style="font-size: 0.85rem;">
+              <span class="badge bg-secondary me-1">Java</span>
+              <span class="badge bg-secondary me-1">Android Studio</span>
+              <span class="badge bg-secondary me-1">XML</span>
+              <span class="badge bg-secondary me-1">Firebase</span>
+              <span class="badge bg-secondary me-1">Git</span>
             </p>
           </div>
         </div>
 
       </div>
+    </section>
 
-      <!-- Navigation Arrows -->
-      <button
-        class="btn btn-primary d-none d-md-flex align-items-center justify-content-center position-absolute top-50 start-0 translate-middle-y rounded-circle"
-        onclick="scrollCertificates('left')"
-        style="width: 40px; height: 40px; background-color: var(--gold) !important; border-color: var(--gold) !important; z-index: 10;"
-        aria-label="Scroll left">
-        <i class="fa-solid fa-chevron-left" style="color: #fff;"></i>
-      </button>
-      <button
-        class="btn btn-primary d-none d-md-flex align-items-center justify-content-center position-absolute top-50 end-0 translate-middle-y rounded-circle"
-        onclick="scrollCertificates('right')"
-        style="width: 40px; height: 40px; background-color: var(--gold) !important; border-color: var(--gold) !important; z-index: 10;"
-        aria-label="Scroll right">
-        <i class="fa-solid fa-chevron-right" style="color: #fff;"></i>
-      </button>
+    <!-- Projects Section -->
+    <section class="container-fluid py-5 fade-up-element" id="projects">
+      <h2 class="text-center mb-4 fw-bold">My <span class="text-primary">Projects</span></h2>
+
+      <div class="text-center mb-4">
+        <button class="btn btn-primary filter-btn" data-filter="all">All</button>
+        <button class="btn btn-light filter-btn" data-filter="ai">AI</button>
+        <button class="btn btn-light filter-btn" data-filter="web">Web</button>
+        <button class="btn btn-light filter-btn" data-filter="other">Others</button>
+      </div>
+
+      <div class="row g-4 px-3 px-md-4" id="projectContainer">
+        <!-- TrackBack Application -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="web">
+          <div class="card p-3 shadow-sm w-100 h-100">
+            <div class="project-img-wrapper">
+              <img src="assets-portfolio/project_thumbnail/TrackBack.png" class="project-thumbnail"
+                alt="TrackBack Application Thumbnail">
+            </div>
+
+            <h5>TrackBack - Smart Lost & Found System</h5>
+
+            <p>
+              AI-powered Lost & Found web application that securely connects people who lose
+              and find items through smart matching, ownership verification, real-time
+              notifications, and protected communication using Firebase and Cloudinary.
+            </p>
+
+            <div class="mt-auto">
+              <a href="https://github.com/pramithm/TrackBack-Web-PDD" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">
+                GitHub
+              </a>
+
+              <a href="https://pramithm.github.io/TrackBack-Web-PDD/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Movie Recommendation System -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
+          <div class="card p-3 shadow-sm w-100 h-100">
+            <div class="project-img-wrapper">
+              <img src="assets-portfolio/project_thumbnail/Movie_recommendation_system.png" class="project-thumbnail"
+                alt="Movie Recommendation System Thumbnail">
+            </div>
+
+            <h5>Movie Recommendation System</h5>
+
+            <p>
+              Machine Learning-based content recommendation system that suggests similar movies
+              using metadata and cosine similarity. Built with Streamlit and integrated with the
+              TMDB API to display live movie posters and provide an interactive user experience.
+            </p>
+
+            <div class="mt-auto">
+              <a href="https://github.com/pramithm/Movie-Recommendation-System" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">
+                GitHub
+              </a>
+
+              <a href="https://movierecommendationsystempramith.streamlit.app/" target="_blank"
+                rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interior Design Website -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-2" data-category="web">
+          <div class="card p-3 shadow-sm w-100 h-100">
+            <div class="project-img-wrapper">
+              <img src="assets-portfolio/project_thumbnail/Interior Website.png" class="project-thumbnail"
+                alt="Interior Design Website Thumbnail">
+            </div>
+            <h5>Interior Design Website</h5>
+            <p>Responsive business website featuring interactive project galleries, client testimonials, smooth
+              animations, and contact form validation.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/pramithm/Interior-Business-Website" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">GitHub</a>
+              <a href="https://agapeinteriors.in/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fraud Detection System -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
+          <div class="card p-3 shadow-sm w-100 h-100">
+            <div class="project-img-wrapper">
+              <img src="assets-portfolio/project_thumbnail/Fraud_Detection.png" class="project-thumbnail"
+                alt="Fraud Detection System Thumbnail">
+            </div>
+            <h5>Fraud Detection System</h5>
+            <p>ML model using SMOTE oversampling and XGBoost/Random Forest (90%+ ROC-AUC) to detect fraudulent
+              transactions with a Flask API backend.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">GitHub</a>
+              <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- House Price Prediction -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-3" data-category="ai">
+          <div class="card p-3 shadow-sm w-100 h-100">
+            <div class="project-img-wrapper">
+              <img src="assets-portfolio/project_thumbnail/House Price Predication.png" class="project-thumbnail"
+                alt="House Price Prediction Thumbnail">
+            </div>
+            <h5>House Price Prediction</h5>
+            <p>Regression model (Linear Regression, Ridge, Lasso, Gradient Boosting) achieving an 18% RMSE reduction,
+              integrated with a web interface.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">GitHub</a>
+              <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Management System -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="other">
+          <div class="card p-3 shadow-sm w-100 h-100">
+            <div class="project-img-wrapper">
+              <img src="assets-portfolio/project_thumbnail/Student Management System.png" class="project-thumbnail"
+                alt="Student Management System Thumbnail">
+            </div>
+            <h5>Student Management System</h5>
+            <p>Full-stack CRUD student record application implementing robust security authentication, role-based
+              controls, and database schemas.</p>
+            <div class="mt-auto">
+              <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">GitHub</a>
+              <a href="https://github.com/pramithm" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Face-Controlled Mouse Cursor -->
+        <div class="col-12 col-md-6 col-lg-4 d-flex project-card fade-up-element delay-1" data-category="ai">
+          <div class="card p-3 shadow-sm w-100 h-100">
+            <div class="project-img-wrapper">
+              <img src="assets-portfolio/project_thumbnail/Face_controlled_mouse.png" class="project-thumbnail"
+                alt="Face-Controlled Mouse Cursor Thumbnail">
+            </div>
+
+            <h5>Face-Controlled Mouse Cursor</h5>
+
+            <p>
+              AI-powered hands-free mouse control system that tracks head movements and eye gaze
+              to move the cursor in real time. Built using Python, OpenCV, and MediaPipe for
+              smooth, accurate, and accessible computer interaction.
+            </p>
+
+            <div class="mt-auto">
+              <a href="https://github.com/pramithm/Face-Mouse-Cursor" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark btn-sm">
+                GitHub
+              </a>
+
+              <a href="https://github.com/pramithm/Face-Mouse-Cursor" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="container-fluid py-5 fade-up-element" id="certifications"
+      style="background-color: rgba(233, 196, 102, 0.794);">
+      <h2 class="text-center mb-4 fw-bold">My <span class="text-primary"
+          style="color: rgb(74, 68, 68) !important;">Certifications</span></h2>
+
+      <div class="position-relative px-md-5 mx-auto" style="max-width: 1200px;">
+        <!-- Scroll Container -->
+        <div class="d-flex overflow-auto gap-4 py-3 px-2 no-scrollbar" id="certScrollContainer"
+          style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+
+          <!-- Card 1: SQL Specialist -->
+          <div class="flex-shrink-0" style="width: 320px;">
+            <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">SQL Database
+                Specialist
+              </h5>
+              <div class="cert-img-wrapper">
+                <a href="assets-portfolio/certificates/SQL Certificate.png" target="_blank" rel="noopener noreferrer">
+                  <img src="assets-portfolio/certificates/SQL Certificate.png"
+                    alt="SQL Database Specialist Certification" class="w-100 h-100 object-fit-cover hover-zoom">
+                </a>
+              </div>
+              <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
+                Issued by Oracle. Certified in structured querying, relational schema designs, and database performance
+                tuning.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: AI Engineer Intern -->
+          <div class="flex-shrink-0" style="width: 320px;">
+            <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">AI Engineer
+                Internship
+              </h5>
+              <div class="cert-img-wrapper">
+                <a href="assets-portfolio/certificates/Aimen certificate.png" target="_blank" rel="noopener noreferrer">
+                  <img src="assets-portfolio/certificates/Aimen certificate.png"
+                    alt="AI Engineer Internship Certificate" class="w-100 h-100 object-fit-cover hover-zoom">
+                </a>
+              </div>
+              <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
+                Issued by Aimen Electronics. internship completion certifying practical expertise in ADAS and AI model
+                optimization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: App Developer Intern -->
+          <div class="flex-shrink-0" style="width: 320px;">
+            <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">App Developer
+                Internship</h5>
+              <div class="cert-img-wrapper">
+                <a href="assets-portfolio/certificates/secure dataware certificate.png" target="_blank"
+                  rel="noopener noreferrer">
+                  <img src="assets-portfolio/certificates/secure dataware certificate.png"
+                    alt="App Developer Internship Certificate" class="w-100 h-100 object-fit-cover hover-zoom">
+                </a>
+              </div>
+              <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
+                Issued by Secure Dataware Technologies. Certified App Development training in Android SDK frameworks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Salesforce Developer -->
+          <div class="flex-shrink-0" style="width: 320px;">
+            <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Salesforce Developer
+              </h5>
+              <div class="cert-img-wrapper">
+                <a href="assets-portfolio/certificates/saleforce.png" target="_blank" rel="noopener noreferrer">
+                  <img src="assets-portfolio/certificates/saleforce.png" alt="Salesforce Developer Certification"
+                    class="w-100 h-100 object-fit-cover hover-zoom">
+                </a>
+              </div>
+              <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
+                Issued by Salesforce. Certified in CRM customization, Apex workflows, and lightning component developer
+                fundamentals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: Cognizant Hackathon -->
+          <div class="flex-shrink-0" style="width: 320px;">
+            <div class="card p-3 shadow-sm h-100 bg-white" style="border-top: 5px solid var(--gold);">
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Cognizant Hackathon
+              </h5>
+              <div class="cert-img-wrapper">
+                <a href="assets-portfolio/certificates/cognizant hackathon.png" target="_blank"
+                  rel="noopener noreferrer">
+                  <img src="assets-portfolio/certificates/cognizant hackathon.png" alt="Cognizant Hackathon Certificate"
+                    class="w-100 h-100 object-fit-cover hover-zoom">
+                </a>
+              </div>
+              <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
+                Cognizant Hackathon credentials certifying leadership, project coordination, and hackathon organization.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button
+          class="btn btn-primary d-none d-md-flex align-items-center justify-content-center position-absolute top-50 start-0 translate-middle-y rounded-circle"
+          onclick="scrollCertificates('left')"
+          style="width: 40px; height: 40px; background-color: var(--gold) !important; border-color: var(--gold) !important; z-index: 10;"
+          aria-label="Scroll left">
+          <i class="fa-solid fa-chevron-left" style="color: #fff;"></i>
+        </button>
+        <button
+          class="btn btn-primary d-none d-md-flex align-items-center justify-content-center position-absolute top-50 end-0 translate-middle-y rounded-circle"
+          onclick="scrollCertificates('right')"
+          style="width: 40px; height: 40px; background-color: var(--gold) !important; border-color: var(--gold) !important; z-index: 10;"
+          aria-label="Scroll right">
+          <i class="fa-solid fa-chevron-right" style="color: #fff;"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="container-fluid py-5 fade-up-element" id="resume">
+      <h2 class="text-center fw-bold">My <span class="text-primary"
+          style="color: rgb(74, 68, 68) !important;">Resume</span></h2>
+      <div class="mx-auto mb-4" style="width: 80px; height: 4px; background-color: #3b5bdb;"></div>
+      <div class="row justify-content-center">
+        <div class="col-11 col-md-10 col-lg-8">
+          <div class="p-4 p-md-5 shadow rounded text-center bg-light">
+            <p class="mb-4 text-muted">
+              Interested in my full experience and qualifications? Preview and download my resume
+              below to learn more about my education, skills, and projects.
+            </p>
+
+            <!-- Embedded Resume PDF Preview -->
+            <div class="ratio ratio-16x9 shadow-sm rounded mb-4"
+              style="max-height: 500px; overflow: hidden; border: 1.5px solid rgba(204, 162, 90, 0.3);">
+              <iframe src="assets-portfolio/Pramith_Resume.pdf" style="border:0; width: 100%; height: 500px;"></iframe>
+            </div>
+
+            <!-- Preview & Action Buttons -->
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+              <a href="assets-portfolio/Pramith_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-dark px-4 py-2">View Resume</a>
+              <a href="assets-portfolio/Pramith_Resume.pdf" download class="btn btn-primary px-4 py-2"
+                style="background-color: var(--gold) !important; border-color: var(--gold) !important; color: #fff !important;">Download
+                Resume</a>
+              <button onclick="sharePortfolio()" class="btn btn-outline-dark px-4 py-2"><i
+                  class="fa-solid fa-share-nodes"></i> Share Portfolio</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container-fluid py-5 fade-up-element" id="contact">
+      <h2 class="text-center fw-bold">Get In <span class="text-primary"
+          style="color: rgb(74, 68, 68) !important;">Touch</span></h2>
+      <div class="mx-auto mb-3" style="width: 80px; height: 4px; background:#3b5bdb;"></div>
+      <p class="text-center text-muted mb-5">
+        I'm always open to new opportunities and collaborations. Feel free to reach out!
+      </p>
+
+      <div class="row justify-content-center g-4">
+
+        <div class="col-11 col-md-8 fade-up-element delay-1">
+          <div class="d-flex align-items-center p-3 p-md-4 shadow rounded bg-light">
+            <div class="me-3 p-2 p-md-3 bg-opacity-25 rounded contact-icon" style="background-color: rgb(83,81,81);"><i
+                class="fa-regular fa-envelope" style="color: rgb(236, 119, 119);"></i> </div>
+            <div class="overflow-hidden">
+              <small class="text-muted">EMAIL</small>
+              <p class="mb-0 fw-semibold text-truncate"><a href="mailto:pramith212@gmail.com"
+                  style="color: #86170f;">pramith212@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-8 fade-up-element delay-2">
+          <div class="d-flex align-items-center p-3 p-md-4 shadow rounded bg-light">
+            <div class="me-3 p-2 p-md-3 bg-opacity-25 rounded contact-icon" style="background-color: rgb(83,81,81);"><i
+                class="fa-brands fa-linkedin" style="color: rgb(182, 211, 240);"></i></div>
+            <div class="overflow-hidden">
+              <small class="text-muted">LINKEDIN</small>
+              <p class="mb-0 fw-semibold text-truncate"><a
+                  href="https://www.linkedin.com/in/pramith-maredukonda-346262364/" target="_blank"
+                  rel="noopener noreferrer" style="color: #86170f;">linkedin.com/in/pramithmaredukonda</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-8 fade-up-element delay-3">
+          <div class="d-flex align-items-center p-3 p-md-4 shadow rounded bg-light">
+            <div class="me-3 p-2 p-md-3 bg-opacity-25 rounded contact-icon" style="background-color: rgb(83,81,81);"><i
+                class="fa-brands fa-github" style="color: rgb(165, 149, 78);"></i></div>
+            <div class="overflow-hidden">
+              <small class="text-muted">GITHUB</small>
+              <p class="mb-0 fw-semibold text-truncate"><a href="https://github.com/pramithm/" target="_blank"
+                  rel="noopener noreferrer" style="color: #86170f;">github.com/pramithm</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Floating Social Buttons -->
+    <div class="floating-social" id="socialBox">
+
+      <!-- Close Button -->
+      <span class="close-btn" onclick="closeSocial()" aria-label="Close social box">×</span>
+
+      <!-- Email -->
+      <a href="mailto:pramith212@gmail.com" class="social-btn email" aria-label="Email Pramith">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/pramith-maredukonda-346262364/" target="_blank" rel="noopener noreferrer"
+        class="social-btn linkedin" aria-label="LinkedIn Profile">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/pramithm/" target="_blank" rel="noopener noreferrer" class="social-btn github"
+        aria-label="GitHub Profile">
+        <i class="fab fa-github"></i>
+      </a>
+
     </div>
-  </section>
 
-  <!-- Resume Section -->
-  <section class="container-fluid py-5 fade-up-element" id="resume">
-    <h2 class="text-center fw-bold">My <span class="text-primary" style ="color: rgb(74, 68, 68) !important;">Resume</span></h2>
-    <div class="mx-auto mb-4" style="width: 80px; height: 4px; background-color: #3b5bdb;"></div>
-    <div class="row justify-content-center">
-      <div class="col-11 col-md-10 col-lg-8">
-        <div class="p-4 p-md-5 shadow rounded text-center bg-light">
-          <p class="mb-4 text-muted">
-            Interested in my full experience and qualifications? Preview and download my resume
-            below to learn more about my education, skills, and projects.
-          </p>
-
-          <!-- Embedded Resume PDF Preview -->
-          <div class="ratio ratio-16x9 shadow-sm rounded mb-4"
-            style="max-height: 500px; overflow: hidden; border: 1.5px solid rgba(204, 162, 90, 0.3);">
-            <iframe src="assets-portfolio/Pramith_Resume.pdf" style="border:0; width: 100%; height: 500px;"></iframe>
-          </div>
-
-          <!-- Preview & Action Buttons -->
-          <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="assets-portfolio/Pramith_Resume.pdf" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline-dark px-4 py-2">View Resume</a>
-            <a href="assets-portfolio/Pramith_Resume.pdf" download class="btn btn-primary px-4 py-2"
-              style="background-color: var(--gold) !important; border-color: var(--gold) !important; color: #fff !important;">Download
-              Resume</a>
-            <button onclick="sharePortfolio()" class="btn btn-outline-dark px-4 py-2"><i
-                class="fa-solid fa-share-nodes"></i> Share Portfolio</button>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="container-fluid py-5 fade-up-element" id="contact">
-    <h2 class="text-center fw-bold">Get In <span class="text-primary" style ="color: rgb(74, 68, 68) !important;">Touch</span></h2>
-    <div class="mx-auto mb-3" style="width: 80px; height: 4px; background:#3b5bdb;"></div>
-    <p class="text-center text-muted mb-5">
-      I'm always open to new opportunities and collaborations. Feel free to reach out!
-    </p>
-
-    <div class="row justify-content-center g-4">
-
-      <div class="col-11 col-md-8 fade-up-element delay-1">
-        <div class="d-flex align-items-center p-3 p-md-4 shadow rounded bg-light">
-          <div class="me-3 p-2 p-md-3 bg-opacity-25 rounded contact-icon" style="background-color: rgb(83,81,81);"><i
-              class="fa-regular fa-envelope" style="color: rgb(236, 119, 119);"></i> </div>
-          <div class="overflow-hidden">
-            <small class="text-muted">EMAIL</small>
-            <p class="mb-0 fw-semibold text-truncate"><a href="mailto:pramith212@gmail.com"
-                style="color: #86170f;">pramith212@gmail.com</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-11 col-md-8 fade-up-element delay-2">
-        <div class="d-flex align-items-center p-3 p-md-4 shadow rounded bg-light">
-          <div class="me-3 p-2 p-md-3 bg-opacity-25 rounded contact-icon" style="background-color: rgb(83,81,81);"><i
-              class="fa-brands fa-linkedin" style="color: rgb(182, 211, 240);"></i></div>
-          <div class="overflow-hidden">
-            <small class="text-muted">LINKEDIN</small>
-            <p class="mb-0 fw-semibold text-truncate"><a
-                href="https://www.linkedin.com/in/pramith-maredukonda-346262364/" target="_blank"
-                rel="noopener noreferrer" style="color: #86170f;">linkedin.com/in/pramithmaredukonda</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-11 col-md-8 fade-up-element delay-3">
-        <div class="d-flex align-items-center p-3 p-md-4 shadow rounded bg-light">
-          <div class="me-3 p-2 p-md-3 bg-opacity-25 rounded contact-icon" style="background-color: rgb(83,81,81);"><i
-              class="fa-brands fa-github" style="color: rgb(165, 149, 78);"></i></div>
-          <div class="overflow-hidden">
-            <small class="text-muted">GITHUB</small>
-            <p class="mb-0 fw-semibold text-truncate"><a href="https://github.com/pramithm/" target="_blank"
-                rel="noopener noreferrer" style="color: #86170f;">github.com/pramithm</a></p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Floating Social Buttons -->
-  <div class="floating-social" id="socialBox">
-
-    <!-- Close Button -->
-    <span class="close-btn" onclick="closeSocial()" aria-label="Close social box">×</span>
-
-    <!-- Email -->
-    <a href="mailto:pramith212@gmail.com" class="social-btn email" aria-label="Email Pramith">
-      <i class="fas fa-envelope"></i>
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/pramith-maredukonda-346262364/" target="_blank" rel="noopener noreferrer"
-      class="social-btn linkedin" aria-label="LinkedIn Profile">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-
-    <!-- GitHub -->
-    <a href="https://github.com/pramithm/" target="_blank" rel="noopener noreferrer" class="social-btn github"
-      aria-label="GitHub Profile">
-      <i class="fab fa-github"></i>
-    </a>
+    <footer class="text-center py-4 border-top">
+      <p class="mb-0 text-muted">© 2026 Pramith Maredukonda. Built with passion & code.</p>
+    </footer>
 
   </div>
-
-  <footer class="text-center py-4 border-top">
-    <p class="mb-0 text-muted">© 2026 Pramith Maredukonda. Built with passion & code.</p>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

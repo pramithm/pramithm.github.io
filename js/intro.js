@@ -2,6 +2,12 @@ window.addEventListener("load", ()=>{
 
     if(sessionStorage.getItem("introPlayed")){
         document.getElementById("intro").style.display="none";
+        document.documentElement.classList.add("intro-played");
+        const wrapper = document.getElementById("portfolio-wrapper");
+        if (wrapper) {
+            wrapper.style.opacity = "1";
+            wrapper.style.visibility = "visible";
+        }
         return;
     }
 
@@ -16,28 +22,28 @@ window.addEventListener("load", ()=>{
         ease:"power2.out"
     })
 
-    .from("h1",{
+    .from("#intro-name",{
         opacity:0,
         y:20,
         duration:.5,
         ease:"power2.out"
     })
 
-    .from("h2",{
+    .from("#intro-title",{
         opacity:0,
         y:20,
         duration:.5,
         ease:"power2.out"
     })
 
-    .from("p",{
+    .from("#intro-description",{
         opacity:0,
         y:20,
         duration:.5,
         ease:"power2.out"
     })
 
-    .to(".progress-bar",{
+    .to(".progress-bar1",{
         width:"100%",
         duration:0.75,
         ease:"power1.inOut"
@@ -50,7 +56,15 @@ window.addEventListener("load", ()=>{
         ease:"power2.inOut",
         onComplete:()=>{
             document.getElementById("intro").remove();
+            document.documentElement.classList.add("intro-played");
         }
-    });
+    })
+
+    .to("#portfolio-wrapper", {
+        opacity: 1,
+        visibility: "visible",
+        duration: 0.7,
+        ease: "power2.inOut"
+    }, "-=0.7");
 
 });
