@@ -33,6 +33,12 @@ body {
   background-color: var(--butter-light);
   color: var(--text-dark);
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent; /* remove tap flash on mobile */
+}
+
+/* Touch devices: prevent accidental text selection */
+a, button, .btn, .social-btn, .filter-btn, .nav-link {
+  touch-action: manipulation;
 }
 
 /* ══════════════════════════════════════════
@@ -397,9 +403,12 @@ body {
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
-.about_me:hover {
-  box-shadow: 0 16px 48px rgba(203, 189, 147, 0.35), 0 4px 16px rgba(203, 189, 147, 0.2);
-  transform: translateY(-4px);
+/* Only lift on real mouse pointer — prevents jump when tapped on mobile */
+@media (hover: hover) and (pointer: fine) {
+  .about_me:hover {
+    box-shadow: 0 16px 48px rgba(203, 189, 147, 0.35), 0 4px 16px rgba(203, 189, 147, 0.2);
+    transform: translateY(-4px);
+  }
 }
 
 /* ── SKILLS SECTION ───────────────────────── */
@@ -430,9 +439,11 @@ body {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-#skills .bg-light:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(204, 162, 90, 0.22), 0 4px 12px rgba(204, 162, 90, 0.14) !important;
+@media (hover: hover) and (pointer: fine) {
+  #skills .bg-light:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(204, 162, 90, 0.22), 0 4px 12px rgba(204, 162, 90, 0.14) !important;
+  }
 }
 
 #skills h5 {
@@ -528,9 +539,11 @@ body {
   animation: cardEntrance 0.5s ease both;
 }
 
-#projects .card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 20px 50px rgba(204, 162, 90, 0.22) !important;
+@media (hover: hover) and (pointer: fine) {
+  #projects .card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 50px rgba(204, 162, 90, 0.22) !important;
+  }
 }
 
 .project-img-wrapper {
@@ -625,9 +638,11 @@ body {
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
-#resume .bg-light:hover {
-  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.11), 0 4px 16px rgba(0, 0, 0, 0.06);
-  transform: translateY(-3px);
+@media (hover: hover) and (pointer: fine) {
+  #resume .bg-light:hover {
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.11), 0 4px 16px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
+  }
 }
 
 #resume .text-muted {
@@ -688,9 +703,11 @@ body {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-#contact .bg-light:hover {
-  transform: translateY(-6px) translateX(4px);
-  box-shadow: 0 16px 40px rgba(204, 162, 90, 0.28) !important;
+@media (hover: hover) and (pointer: fine) {
+  #contact .bg-light:hover {
+    transform: translateY(-6px) translateX(4px);
+    box-shadow: 0 16px 40px rgba(204, 162, 90, 0.28) !important;
+  }
 }
 
 .contact-icon {
@@ -1046,22 +1063,27 @@ footer .text-muted:hover { color: var(--apricot) !important; }
 .delay-4 { transition-delay: 0.4s !important; }
 
 /* Hero Section Enhancements */
-.hero-img-wrapper {
-  animation: float 6s ease-in-out infinite;
-}
+/* NOTE: hero-img-wrapper does NOT get float animation here — the hero-img
+   already floats on its own (defined in its base rule). Animating BOTH
+   parent and child causes jitter and compounding movement on mobile. */
 .hero-img {
   box-shadow: 0 10px 30px rgba(204, 162, 90, 0.15);
   animation: glowTrace 4s ease-in-out infinite !important;
 }
-.hero-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 20px 40px rgba(204, 162, 90, 0.35), 0 0 30px rgba(255, 177, 110, 0.2) !important;
+/* Hover scale only on pointer (non-touch) devices */
+@media (hover: hover) and (pointer: fine) {
+  .hero-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(204, 162, 90, 0.35), 0 0 30px rgba(255, 177, 110, 0.2) !important;
+  }
 }
 
-/* Button Lift & Shadow Effects */
-.btn:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 20px rgba(204, 162, 90, 0.25) !important;
+/* Button Lift & Shadow Effects — only on real pointer (mouse) devices */
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(204, 162, 90, 0.25) !important;
+  }
 }
 .btn:active {
   transform: translateY(-1px) !important;
@@ -1072,32 +1094,37 @@ footer .text-muted:hover { color: var(--apricot) !important; }
 #skills .bg-light {
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
-#skills .bg-light:hover {
-  transform: translateY(-6px) scale(1.02) !important;
-  box-shadow: 0 16px 36px rgba(204, 162, 90, 0.18) !important;
-}
 
 /* Project Cards Image Zoom Hover & Elevation */
 #projects .card {
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
-#projects .card:hover {
-  transform: translateY(-6px) scale(1.01) !important;
-  box-shadow: 0 18px 36px rgba(204, 162, 90, 0.2) !important;
-}
 
-/* Education and Experience Card Lifts */
-#education .bg-light:hover, #experience .bg-light:hover, #certifications .card:hover {
-  transform: translateY(-6px) scale(1.02) !important;
-  box-shadow: 0 16px 36px rgba(204, 162, 90, 0.18) !important;
+/* Hover lifts ONLY on real pointer/mouse devices — prevents jump on mobile tap */
+@media (hover: hover) and (pointer: fine) {
+  #skills .bg-light:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 16px 36px rgba(204, 162, 90, 0.18) !important;
+  }
+  #projects .card:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    box-shadow: 0 18px 36px rgba(204, 162, 90, 0.2) !important;
+  }
+  #education .bg-light:hover, #experience .bg-light:hover, #certifications .card:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 16px 36px rgba(204, 162, 90, 0.18) !important;
+  }
 }
 
 /* Contact Cards focus and hover */
 .contact-icon {
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
-#contact .bg-light:hover .contact-icon {
-  transform: scale(1.15) rotate(-5deg) !important;
+/* Contact icon spin only on mouse hover — not on touch tap */
+@media (hover: hover) and (pointer: fine) {
+  #contact .bg-light:hover .contact-icon {
+    transform: scale(1.15) rotate(-5deg) !important;
+  }
 }
 .form-control:focus {
   border-color: var(--gold) !important;
