@@ -227,17 +227,99 @@
 
     <!-- About Section -->
     <section class="container-fluid fade-up-element" id="about">
-      <h1 class="text-center py-3">About Me</h1>
-      <div class="about_me col-11 col-sm-9 col-lg-7 mx-auto">
-        <p>I'm a <span class="fw-bold">Computer Science and Engineering</span> student specializing in <span
-            class="fw-bold">Artificial Intelligence and Machine Learning</span>. I love
-          building smart applications that leverage data-driven insights. With a strong foundation in <span
-            class="fw-bold">Data Structures</span>,
-          <span class="fw-bold">Algorithms</span>, <span class="fw-bold">DBMS</span>, and <span class="fw-bold">Computer
-            Networks</span>, I enjoy tackling <span class="fw-bold">complex problems</span> and learning cutting-edge
-          technologies. I'm also deeply interested in <span class="fw-bold">Cybersecurity</span> and how AI intersects
-          with securing digital systems.
-        </p>
+      <div class="about-inner">
+
+        <!-- Section heading -->
+        <h1 class="text-center">About Me</h1>
+
+        <div class="about-grid">
+
+          <!-- LEFT: Bio card -->
+          <div class="about-bio-card fade-up-element delay-1">
+            <div class="about-bio-greeting">
+              <span class="wave-emoji">👋</span> Hey there!
+            </div>
+            <p class="about-bio-text">
+              I'm a <strong>Computer Science &amp; Engineering</strong> student specialising in
+              <strong>Artificial Intelligence and Machine Learning</strong>. I love building
+              smart applications that turn raw data into real-world impact.
+            </p>
+            <p class="about-bio-text">
+              My foundation spans <strong>Data Structures &amp; Algorithms</strong>, <strong>DBMS</strong>,
+              <strong>Computer Networks</strong>, and <strong>Cybersecurity</strong> — with a growing
+              passion for how AI intersects with securing digital systems.
+            </p>
+
+            <!-- Interest Tags -->
+            <div class="about-tags">
+              <span class="about-tag"><i class="fa-solid fa-brain me-1"></i>AI / ML</span>
+              <span class="about-tag"><i class="fa-solid fa-shield-halved me-1"></i>Cybersecurity</span>
+              <span class="about-tag"><i class="fa-solid fa-eye me-1"></i>Computer Vision</span>
+              <span class="about-tag"><i class="fa-solid fa-code me-1"></i>Full Stack</span>
+              <span class="about-tag"><i class="fa-brands fa-android me-1"></i>Android Dev</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: Quick facts -->
+          <div class="about-facts-col fade-up-element delay-2">
+
+            <!-- Stat counters row -->
+            <div class="about-stats-row">
+              <div class="about-stat">
+                <span class="about-stat-num">8.9</span>
+                <span class="about-stat-label">CGPA</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-num">8+</span>
+                <span class="about-stat-label">Projects</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-num">10+</span>
+                <span class="about-stat-label">Certifications</span>
+              </div>
+            </div>
+
+            <!-- Quick-fact pills -->
+            <ul class="about-facts-list">
+              <li class="about-fact-item">
+                <span class="about-fact-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <div>
+                  <span class="about-fact-label">Degree</span>
+                  <span class="about-fact-value">B.E. CSE — AI &amp; ML, 2023–2027</span>
+                </div>
+              </li>
+              <li class="about-fact-item">
+                <span class="about-fact-icon"><i class="fa-solid fa-university"></i></span>
+                <div>
+                  <span class="about-fact-label">University</span>
+                  <span class="about-fact-value">Saveetha School of Engineering, Chennai</span>
+                </div>
+              </li>
+              <li class="about-fact-item">
+                <span class="about-fact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <span class="about-fact-label">Location</span>
+                  <span class="about-fact-value">Chennai, Tamil Nadu, India</span>
+                </div>
+              </li>
+              <li class="about-fact-item">
+                <span class="about-fact-icon"><i class="fa-solid fa-language"></i></span>
+                <div>
+                  <span class="about-fact-label">Languages</span>
+                  <span class="about-fact-value">English · Telugu · Hindi</span>
+                </div>
+              </li>
+              <li class="about-fact-item">
+                <span class="about-fact-icon"><i class="fa-solid fa-briefcase"></i></span>
+                <div>
+                  <span class="about-fact-label">Open to</span>
+                  <span class="about-fact-value">Internships &amp; Collaborations</span>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1029,7 +1111,7 @@
     <section class="container-fluid py-5 fade-up-element" id="resume">
       <h2 class="text-center fw-bold">My <span class="text-primary"
           style="color: rgb(74, 68, 68) !important;">Resume</span></h2>
-      <div class="mx-auto mb-4" style="width: 80px; height: 4px; background-color: #3b5bdb;"></div>
+      <div class="mx-auto mb-4" style="width: 80px; height: 4px; background: linear-gradient(90deg, var(--apricot), var(--gold)); border-radius: 2px;"></div>
       <div class="row justify-content-center">
         <div class="col-11 col-md-10 col-lg-8">
           <div class="p-4 p-md-5 shadow rounded text-center bg-light">
@@ -1038,21 +1120,39 @@
               below to learn more about my education, skills, and projects.
             </p>
 
-            <!-- Embedded Resume PDF Preview -->
-            <div class="ratio ratio-16x9 shadow-sm rounded mb-4"
-              style="max-height: 500px; overflow: hidden; border: 1.5px solid rgba(204, 162, 90, 0.3);">
-              <iframe src="assets-portfolio/Pramith_Resume.pdf" style="border:0; width: 100%; height: 500px;"></iframe>
+            <!-- ── DESKTOP: Embedded PDF iframe (hidden on mobile) ── -->
+            <div class="resume-iframe-wrapper d-none d-md-block mb-4">
+              <iframe
+                src="assets-portfolio/Pramith_Resume.pdf"
+                title="Pramith Maredukonda Resume"
+                style="border: 0; width: 100%; height: 560px; border-radius: 10px; border: 1.5px solid rgba(204,162,90,0.3);">
+              </iframe>
             </div>
+
+            <!-- ── MOBILE: Tap-to-preview card (hidden on desktop) ── -->
+            <a href="assets-portfolio/Pramith_Resume.pdf" target="_blank" rel="noopener noreferrer"
+              class="resume-mobile-preview d-flex d-md-none text-decoration-none mb-4">
+              <div class="resume-mobile-preview-inner">
+                <div class="resume-mobile-icon">
+                  <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <p class="resume-mobile-title">Pramith_Resume.pdf</p>
+                <p class="resume-mobile-hint">Tap to open &amp; preview</p>
+                <span class="resume-mobile-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Open Resume
+                </span>
+              </div>
+            </a>
 
             <!-- Preview & Action Buttons -->
             <div class="d-flex gap-3 justify-content-center flex-wrap">
               <a href="assets-portfolio/Pramith_Resume.pdf" target="_blank" rel="noopener noreferrer"
-                class="btn btn-outline-dark px-4 py-2">View Resume</a>
+                class="btn btn-outline-dark px-4 py-2"><i class="fa-solid fa-eye me-2"></i>View Resume</a>
               <a href="assets-portfolio/Pramith_Resume.pdf" download class="btn btn-primary px-4 py-2"
-                style="background-color: var(--gold) !important; border-color: var(--gold) !important; color: #fff !important;">Download
-                Resume</a>
-              <button onclick="sharePortfolio()" class="btn btn-outline-dark px-4 py-2"><i
-                  class="fa-solid fa-share-nodes"></i> Share Portfolio</button>
+                style="background-color: var(--gold) !important; border-color: var(--gold) !important; color: #fff !important;">
+                <i class="fa-solid fa-download me-2"></i>Download Resume</a>
+              <button onclick="sharePortfolio()" class="btn btn-outline-dark px-4 py-2">
+                <i class="fa-solid fa-share-nodes me-2"></i> Share Portfolio</button>
             </div>
 
           </div>
