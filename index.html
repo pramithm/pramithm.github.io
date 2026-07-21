@@ -383,96 +383,303 @@
 
     <!-- Skills Section -->
     <section class="container-fluid py-5 fade-up-element" id="skills">
-      <h2 class="text-center mb-4 fw-bold">My <span class="text-primary"
-          style="color: rgb(167, 120, 81) !important;">Skills</span></h2>
 
-      <div class="row g-4 skills-grid">
-
-        <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
-          <div class="p-4 shadow rounded bg-light h-100 w-100">
-            <h5>Programming Languages</h5>
-            <p class="mb-1">Python <span class="float-end">90%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 90%"></div>
-            </div>
-            <p class="mb-1">Java <span class="float-end">80%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 80%"></div>
-            </div>
-            <p class="mb-1">C++ <span class="float-end">75%</span></p>
-            <div class="progress">
-              <div class="progress-bar" style="width: 75%"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
-          <div class="p-4 shadow rounded bg-light h-100 w-100">
-            <h5>Web Technologies</h5>
-            <p class="mb-1">HTML <span class="float-end">85%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 85%"></div>
-            </div>
-            <p class="mb-1">CSS <span class="float-end">80%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 80%"></div>
-            </div>
-            <p class="mb-1">JavaScript <span class="float-end">75%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 75%"></div>
-            </div>
-            <p class="mb-1">React Native <span class="float-end">70%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 70%"></div>
-            </div>
-            <p class="mb-1">Firebase <span class="float-end">65%</span></p>
-            <div class="progress">
-              <div class="progress-bar" style="width: 65%"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 d-flex fade-up-element delay-1">
-          <div class="p-4 shadow rounded bg-light h-100 w-100">
-            <h5>Core Subjects</h5>
-            <p class="mb-1">Data Structures <span class="float-end">85%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 85%"></div>
-            </div>
-            <p class="mb-1">DBMS <span class="float-end">80%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 80%"></div>
-            </div>
-            <p class="mb-1">Computer Networks <span class="float-end">75%</span></p>
-            <div class="progress">
-              <div class="progress-bar" style="width: 75%"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 d-flex fade-up-element delay-2">
-          <div class="p-4 shadow rounded bg-light h-100 w-100">
-            <h5>AI/ML & General Tools</h5>
-            <p class="mb-1">Git & GitHub <span class="float-end">85%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 85%"></div>
-            </div>
-            <p class="mb-1">NumPy & Pandas <span class="float-end">80%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 80%"></div>
-            </div>
-            <p class="mb-1">Scikit-learn <span class="float-end">75%</span></p>
-            <div class="progress mb-3">
-              <div class="progress-bar" style="width: 75%"></div>
-            </div>
-            <p class="mb-1">Cybersecurity <span class="float-end">70%</span></p>
-            <div class="progress">
-              <div class="progress-bar" style="width: 70%"></div>
-            </div>
-          </div>
-        </div>
-
+      <!-- Section Header -->
+      <div class="skills-header text-center mb-5">
+        <h2 class="fw-bold skills-title">My <span class="skills-accent">Skills</span></h2>
+        <p class="skills-subtitle">Technologies & tools I work with</p>
       </div>
+
+      <!-- Category Cards Grid -->
+      <div class="skills-cards-grid">
+
+        <!-- Programming Languages -->
+        <div class="skill-category-card fade-up-element delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon-wrap" style="--cat-color:#CCA25A;">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div>
+              <h5 class="skill-cat-title">Programming Languages</h5>
+              <p class="skill-cat-count">3 technologies</p>
+            </div>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(55,118,171,0.12);--chip-color:#3776AB;">
+                  <i class="fa-brands fa-python"></i>
+                </span>
+                <span class="skill-item-name">Python</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="90" style="--bar-color:#CCA25A;"></div>
+                </div>
+                <span class="skill-pct">90%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(237,117,26,0.12);--chip-color:#ED751A;">
+                  <i class="fa-brands fa-java"></i>
+                </span>
+                <span class="skill-item-name">Java</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="80" style="--bar-color:#CCA25A;"></div>
+                </div>
+                <span class="skill-pct">80%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(0,89,156,0.12);--chip-color:#00599C;">
+                  <i class="fa-solid fa-c"></i>
+                </span>
+                <span class="skill-item-name">C++</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="75" style="--bar-color:#CCA25A;"></div>
+                </div>
+                <span class="skill-pct">75%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Technologies -->
+        <div class="skill-category-card fade-up-element delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon-wrap" style="--cat-color:#FFB16E;">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div>
+              <h5 class="skill-cat-title">Web Technologies</h5>
+              <p class="skill-cat-count">5 technologies</p>
+            </div>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(228,77,38,0.12);--chip-color:#E44D26;">
+                  <i class="fa-brands fa-html5"></i>
+                </span>
+                <span class="skill-item-name">HTML</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="85" style="--bar-color:#FFB16E;"></div>
+                </div>
+                <span class="skill-pct">85%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(38,77,228,0.12);--chip-color:#264DE4;">
+                  <i class="fa-brands fa-css3-alt"></i>
+                </span>
+                <span class="skill-item-name">CSS</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="80" style="--bar-color:#FFB16E;"></div>
+                </div>
+                <span class="skill-pct">80%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(240,219,79,0.18);--chip-color:#b5a000;">
+                  <i class="fa-brands fa-js"></i>
+                </span>
+                <span class="skill-item-name">JavaScript</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="75" style="--bar-color:#FFB16E;"></div>
+                </div>
+                <span class="skill-pct">75%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(97,218,251,0.15);--chip-color:#00B3CB;">
+                  <i class="fa-brands fa-react"></i>
+                </span>
+                <span class="skill-item-name">React Native</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="70" style="--bar-color:#FFB16E;"></div>
+                </div>
+                <span class="skill-pct">70%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(255,202,40,0.15);--chip-color:#FFA000;">
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                </span>
+                <span class="skill-item-name">Firebase</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="65" style="--bar-color:#FFB16E;"></div>
+                </div>
+                <span class="skill-pct">65%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Subjects -->
+        <div class="skill-category-card fade-up-element delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon-wrap" style="--cat-color:#CBBD93;">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div>
+              <h5 class="skill-cat-title">Core Subjects</h5>
+              <p class="skill-cat-count">3 domains</p>
+            </div>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(204,162,90,0.15);--chip-color:#8B6914;">
+                  <i class="fa-solid fa-diagram-project"></i>
+                </span>
+                <span class="skill-item-name">Data Structures</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="85" style="--bar-color:#CBBD93;"></div>
+                </div>
+                <span class="skill-pct">85%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(60,130,220,0.12);--chip-color:#3C82DC;">
+                  <i class="fa-solid fa-database"></i>
+                </span>
+                <span class="skill-item-name">DBMS</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="80" style="--bar-color:#CBBD93;"></div>
+                </div>
+                <span class="skill-pct">80%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(46,160,67,0.12);--chip-color:#2E8B57;">
+                  <i class="fa-solid fa-network-wired"></i>
+                </span>
+                <span class="skill-item-name">Computer Networks</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="75" style="--bar-color:#CBBD93;"></div>
+                </div>
+                <span class="skill-pct">75%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI/ML & General Tools -->
+        <div class="skill-category-card fade-up-element delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon-wrap" style="--cat-color:#CCA25A;">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div>
+              <h5 class="skill-cat-title">AI / ML & Tools</h5>
+              <p class="skill-cat-count">4 technologies</p>
+            </div>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(36,41,47,0.1);--chip-color:#3A2E1A;">
+                  <i class="fa-brands fa-github"></i>
+                </span>
+                <span class="skill-item-name">Git & GitHub</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="85" style="--bar-color:#CCA25A;"></div>
+                </div>
+                <span class="skill-pct">85%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(55,118,171,0.12);--chip-color:#3776AB;">
+                  <i class="fa-solid fa-chart-area"></i>
+                </span>
+                <span class="skill-item-name">NumPy & Pandas</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="80" style="--bar-color:#CCA25A;"></div>
+                </div>
+                <span class="skill-pct">80%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(255,120,0,0.12);--chip-color:#F7931E;">
+                  <i class="fa-solid fa-robot"></i>
+                </span>
+                <span class="skill-item-name">Scikit-learn</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="75" style="--bar-color:#CCA25A;"></div>
+                </div>
+                <span class="skill-pct">75%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-left">
+                <span class="skill-icon-chip" style="--chip-bg:rgba(100,180,100,0.12);--chip-color:#3A7D44;">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </span>
+                <span class="skill-item-name">Cybersecurity</span>
+              </div>
+              <div class="skill-item-right">
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="70" style="--bar-color:#CCA25A;"></div>
+                </div>
+                <span class="skill-pct">70%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.skills-cards-grid -->
+
+      <!-- Tools / Tech Chip Cloud -->
+      <div class="skills-chips-section fade-up-element delay-3">
+        <h6 class="skills-chips-label"><i class="fa-solid fa-toolbox me-2"></i>Also familiar with</h6>
+        <div class="skills-chip-cloud">
+          <span class="sk-chip"><i class="fa-brands fa-android me-1"></i>Android Studio</span>
+          <span class="sk-chip"><i class="fa-solid fa-eye me-1"></i>OpenCV</span>
+          <span class="sk-chip"><i class="fa-solid fa-layer-group me-1"></i>TensorFlow</span>
+          <span class="sk-chip"><i class="fa-solid fa-chart-bar me-1"></i>Matplotlib</span>
+          <span class="sk-chip"><i class="fa-solid fa-flask me-1"></i>Flask</span>
+          <span class="sk-chip"><i class="fa-solid fa-stream me-1"></i>Streamlit</span>
+          <span class="sk-chip"><i class="fa-solid fa-file-csv me-1"></i>Pandas CSV</span>
+          <span class="sk-chip"><i class="fa-solid fa-server me-1"></i>MediaPipe</span>
+        </div>
+      </div>
+
     </section>
 
     <!-- Experience Section -->
@@ -673,7 +880,8 @@
             <h5>Fraud Detection System</h5>
             <p>ML model using SMOTE oversampling and XGBoost / Random Forest achieving
               <strong style="color:var(--gold)">90%+ ROC-AUC</strong> to detect fraudulent transactions,
-              served via a Flask API backend.</p>
+              served via a Flask API backend.
+            </p>
 
             <div class="project-tech-stack mb-3">
               <span class="tech-badge">Python</span>
@@ -684,7 +892,8 @@
 
             <div class="mt-auto">
               <a href="https://github.com/pramithm/CodeVedX-Internship/tree/main/Project-3/fake-news-detection"
-                target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm"><i class="fa-brands fa-github me-1"></i>GitHub</a>
+                target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm"><i
+                  class="fa-brands fa-github me-1"></i>GitHub</a>
               <a href="https://fake-news-predict.vercel.app/" target="_blank" rel="noopener noreferrer"
                 class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Demo</a>
             </div>
@@ -700,7 +909,8 @@
             </div>
             <h5>House Price Prediction</h5>
             <p>Ensemble regression model (Ridge, Lasso, Gradient Boosting) achieving an
-              <strong style="color:var(--gold)">18% RMSE reduction</strong> with a live web prediction interface.</p>
+              <strong style="color:var(--gold)">18% RMSE reduction</strong> with a live web prediction interface.
+            </p>
 
             <div class="project-tech-stack mb-3">
               <span class="tech-badge">Python</span>
@@ -710,10 +920,11 @@
             </div>
 
             <div class="mt-auto">
-              <a href="https://github.com/pramithm/House-Price-Predication/tree/main" target="_blank" rel="noopener noreferrer"
-                class="btn btn-outline-dark btn-sm"><i class="fa-brands fa-github me-1"></i>GitHub</a>
-              <a href="unwanted.html" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Demo</a>
+              <a href="https://github.com/pramithm/House-Price-Predication/tree/main" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline-dark btn-sm"><i
+                  class="fa-brands fa-github me-1"></i>GitHub</a>
+              <a href="unwanted.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i
+                  class="fa-solid fa-arrow-up-right-from-square me-1"></i>Demo</a>
             </div>
           </div>
         </div>
@@ -804,10 +1015,10 @@
             </div>
 
             <div class="mt-auto">
-              <a href="unwanted.html" target="_blank" rel="noopener noreferrer"
-                class="btn btn-outline-dark btn-sm"><i class="fa-brands fa-github me-1"></i>GitHub</a>
-              <a href="unwanted.html" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Demo</a>
+              <a href="unwanted.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm"><i
+                  class="fa-brands fa-github me-1"></i>GitHub</a>
+              <a href="unwanted.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i
+                  class="fa-solid fa-arrow-up-right-from-square me-1"></i>Demo</a>
             </div>
           </div>
         </div>
@@ -837,8 +1048,7 @@
                 class="btn btn-outline-dark btn-sm">
                 <i class="fa-brands fa-github me-1"></i>GitHub
               </a>
-              <a href="unwanted.html" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary btn-sm">
+              <a href="unwanted.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                 <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Demo
               </a>
             </div>
@@ -863,9 +1073,11 @@
 
           <!-- Card 1: SQL Specialist -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-solid fa-building-columns me-1"></i>Oracle</div>
-              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">SQL Database Specialist</h5>
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">SQL Database
+                Specialist</h5>
               <div class="cert-img-wrapper">
                 <a href="assets-portfolio/certificates/SQL Certificate.png" target="_blank" rel="noopener noreferrer">
                   <img src="assets-portfolio/certificates/SQL Certificate.png"
@@ -884,9 +1096,11 @@
 
           <!-- Card 2: AI Engineer Intern -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-solid fa-microchip me-1"></i>Aimen Electronics</div>
-              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">AI Engineer Internship</h5>
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">AI Engineer
+                Internship</h5>
               <div class="cert-img-wrapper">
                 <a href="assets-portfolio/certificates/Aimen certificate.png" target="_blank" rel="noopener noreferrer">
                   <img src="assets-portfolio/certificates/Aimen certificate.png"
@@ -905,9 +1119,12 @@
 
           <!-- Card 3: App Developer Intern -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
-              <div class="cert-issuer-badge"><i class="fa-solid fa-shield-halved me-1"></i>Secure Dataware Technologies</div>
-              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">App Developer Internship</h5>
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
+              <div class="cert-issuer-badge"><i class="fa-solid fa-shield-halved me-1"></i>Secure Dataware Technologies
+              </div>
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">App Developer
+                Internship</h5>
               <div class="cert-img-wrapper">
                 <a href="assets-portfolio/certificates/secure dataware certificate.png" target="_blank"
                   rel="noopener noreferrer">
@@ -919,17 +1136,20 @@
                 Certified App Development training covering Android SDK frameworks and mobile UI architecture.
               </p>
               <div class="mt-auto pt-3 text-center">
-                <a href="assets-portfolio/certificates/secure dataware certificate.png" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-sm cert-view-btn"><i class="fa-solid fa-certificate me-1"></i>View Certificate</a>
+                <a href="assets-portfolio/certificates/secure dataware certificate.png" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-sm cert-view-btn"><i
+                    class="fa-solid fa-certificate me-1"></i>View Certificate</a>
               </div>
             </div>
           </div>
 
           <!-- Card 4: Salesforce Developer -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-solid fa-cloud me-1"></i>Salesforce</div>
-              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Salesforce Developer</h5>
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Salesforce Developer
+              </h5>
               <div class="cert-img-wrapper">
                 <a href="assets-portfolio/certificates/saleforce.png" target="_blank" rel="noopener noreferrer">
                   <img src="assets-portfolio/certificates/saleforce.png" alt="Salesforce Developer Certification"
@@ -948,9 +1168,11 @@
 
           <!-- Card 5: Cognizant Hackathon -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-solid fa-trophy me-1"></i>Cognizant</div>
-              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Cognizant Hackathon</h5>
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">Cognizant Hackathon
+              </h5>
               <div class="cert-img-wrapper">
                 <a href="assets-portfolio/certificates/cognizant hackathon.png" target="_blank"
                   rel="noopener noreferrer">
@@ -962,15 +1184,17 @@
                 Credentials certifying leadership, project coordination, and hackathon organization skills.
               </p>
               <div class="mt-auto pt-3 text-center">
-                <a href="assets-portfolio/certificates/cognizant hackathon.png" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-sm cert-view-btn"><i class="fa-solid fa-certificate me-1"></i>View Certificate</a>
+                <a href="assets-portfolio/certificates/cognizant hackathon.png" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-sm cert-view-btn"><i
+                    class="fa-solid fa-certificate me-1"></i>View Certificate</a>
               </div>
             </div>
           </div>
 
           <!-- Card 6: Google Student Ambassador – Pitch Night -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-brands fa-google me-1"></i>Google</div>
               <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">
                 Google Student Ambassador – Pitch Night
@@ -984,7 +1208,8 @@
                 </a>
               </div>
               <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-                Awarded for innovation, creativity, and presentation skills at the Google Student Ambassador Program 2026 Pitch Night.
+                Awarded for innovation, creativity, and presentation skills at the Google Student Ambassador Program
+                2026 Pitch Night.
               </p>
               <div class="mt-auto pt-3 text-center">
                 <a href="assets-portfolio/certificates/google-pitch-night.png" target="_blank" rel="noopener noreferrer"
@@ -995,7 +1220,8 @@
 
           <!-- Card 7: Introduction to CSS -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-solid fa-graduation-cap me-1"></i>Simplilearn SkillUp</div>
               <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">
                 Introduction to CSS
@@ -1011,15 +1237,17 @@
                 Covers styling fundamentals, layouts, selectors, and responsive web design concepts.
               </p>
               <div class="mt-auto pt-3 text-center">
-                <a href="assets-portfolio/certificates/introduction-to-css.png" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-sm cert-view-btn"><i class="fa-solid fa-certificate me-1"></i>View Certificate</a>
+                <a href="assets-portfolio/certificates/introduction-to-css.png" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-sm cert-view-btn"><i
+                    class="fa-solid fa-certificate me-1"></i>View Certificate</a>
               </div>
             </div>
           </div>
 
           <!-- Card 8: Agile Project Management -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-solid fa-laptop me-1"></i>HP LIFE</div>
               <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">
                 Agile Project Management
@@ -1035,15 +1263,17 @@
                 Training covering Scrum, Kanban, iterative development, MVP planning, and Agile team collaboration.
               </p>
               <div class="mt-auto pt-3 text-center">
-                <a href="assets-portfolio/certificates/agile-project-management.png" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-sm cert-view-btn"><i class="fa-solid fa-certificate me-1"></i>View Certificate</a>
+                <a href="assets-portfolio/certificates/agile-project-management.png" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-sm cert-view-btn"><i
+                    class="fa-solid fa-certificate me-1"></i>View Certificate</a>
               </div>
             </div>
           </div>
 
           <!-- Card 9: TenzorX National AI Hackathon -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-solid fa-robot me-1"></i>Poonawalla Fincorp</div>
               <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">
                 TenzorX National AI Hackathon
@@ -1056,18 +1286,21 @@
                 </a>
               </div>
               <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
-                National AI Hackathon 2026 — collaborated on innovative AI solutions and complex problem-solving challenges.
+                National AI Hackathon 2026 — collaborated on innovative AI solutions and complex problem-solving
+                challenges.
               </p>
               <div class="mt-auto pt-3 text-center">
-                <a href="assets-portfolio/certificates/tenzorx-ai-hackathon.png" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-sm cert-view-btn"><i class="fa-solid fa-certificate me-1"></i>View Certificate</a>
+                <a href="assets-portfolio/certificates/tenzorx-ai-hackathon.png" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-sm cert-view-btn"><i
+                    class="fa-solid fa-certificate me-1"></i>View Certificate</a>
               </div>
             </div>
           </div>
 
           <!-- Card 10: JavaScript ES6 with AI -->
           <div class="flex-shrink-0" style="width: 320px;">
-            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column" style="border-top: 5px solid var(--gold);">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
               <div class="cert-issuer-badge"><i class="fa-solid fa-code me-1"></i>Unstop</div>
               <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">
                 JavaScript ES6 with AI
@@ -1087,6 +1320,45 @@
               </div>
             </div>
           </div>
+
+
+          <!-- Card 11: QuizVerse 2026 Participation -->
+          <div class="flex-shrink-0" style="width: 320px;">
+            <div class="card p-3 shadow-sm h-100 bg-white d-flex flex-column"
+              style="border-top: 5px solid var(--gold);">
+
+              <div class="cert-issuer-badge">
+                <i class="fa-solid fa-award me-1"></i>Unstop × TechZen Innovation
+              </div>
+
+              <h5 class="fw-bold text-center mb-3" style="color: var(--gold); font-size: 1.05rem;">
+                QuizVerse 2026 Participation
+              </h5>
+
+              <div class="cert-img-wrapper">
+                <a href="assets-portfolio/certificates/QuizVerse-2026-Certificate.jpg" target="_blank"
+                  rel="noopener noreferrer">
+                  <img src="assets-portfolio/certificates/QuizVerse-2026-Certificate.jpg"
+                    alt="QuizVerse 2026 Participation Certificate" class="w-100 h-100 object-fit-cover hover-zoom">
+                </a>
+              </div>
+
+              <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.82rem; line-height: 1.5;">
+                Successfully participated in <strong>QuizVerse 2026</strong>, showcasing
+                problem-solving, technical aptitude, and competitive learning through
+                Unstop and TechZen Innovation.
+              </p>
+
+              <div class="mt-auto pt-3 text-center">
+                <a href="assets-portfolio/certificates/QuizVerse-2026-Certificate.jpg" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-sm cert-view-btn">
+                  <i class="fa-solid fa-certificate me-1"></i>View Certificate
+                </a>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
         <!-- Navigation Arrows -->
@@ -1111,7 +1383,9 @@
     <section class="container-fluid py-5 fade-up-element" id="resume">
       <h2 class="text-center fw-bold">My <span class="text-primary"
           style="color: rgb(74, 68, 68) !important;">Resume</span></h2>
-      <div class="mx-auto mb-4" style="width: 80px; height: 4px; background: linear-gradient(90deg, var(--apricot), var(--gold)); border-radius: 2px;"></div>
+      <div class="mx-auto mb-4"
+        style="width: 80px; height: 4px; background: linear-gradient(90deg, var(--apricot), var(--gold)); border-radius: 2px;">
+      </div>
       <div class="row justify-content-center">
         <div class="col-11 col-md-10 col-lg-8">
           <div class="p-4 p-md-5 shadow rounded text-center bg-light">
@@ -1122,9 +1396,7 @@
 
             <!-- ── DESKTOP: Embedded PDF iframe (hidden on mobile) ── -->
             <div class="resume-iframe-wrapper d-none d-md-block mb-4">
-              <iframe
-                src="assets-portfolio/Pramith_Resume.pdf"
-                title="Pramith Maredukonda Resume"
+              <iframe src="assets-portfolio/Pramith_Resume.pdf" title="Pramith Maredukonda Resume"
                 style="border: 0; width: 100%; height: 560px; border-radius: 10px; border: 1.5px solid rgba(204,162,90,0.3);">
               </iframe>
             </div>
@@ -1251,21 +1523,21 @@
       nav.classList.toggle('scrolled', window.scrollY > 30);
     });
 
-    /* Progress bar scroll animation */
+    /* Skill bar scroll animation */
     const progressObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.progress-bar').forEach((bar, i) => {
-            const target = bar.style.width;
+          entry.target.querySelectorAll('.skill-bar-fill').forEach((bar, i) => {
+            const target = bar.getAttribute('data-width') + '%';
             bar.style.width = '0%';
-            setTimeout(() => { bar.style.width = target; }, i * 180);
+            setTimeout(() => { bar.style.width = target; }, i * 150);
           });
           progressObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.2 });
 
-    document.querySelectorAll('#skills .bg-light').forEach(card => {
+    document.querySelectorAll('.skill-category-card').forEach(card => {
       progressObserver.observe(card);
     });
 
